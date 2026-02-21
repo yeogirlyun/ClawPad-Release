@@ -268,3 +268,13 @@ Each published release ships with a version-matched API docs zip asset.
   - Machine-readable endpoint payloads (`reference/*.json`)
 
 Developers can review docs directly on GitHub and download the same docs package bundled with binaries.
+
+Production-grade docs entry points:
+
+- [Quickstart](./api-docs/current/docs/QUICKSTART.md)
+- [Stealth Server Production Guide](./api-docs/current/docs/STEALTH_SERVER_PRODUCTION_GUIDE.md)
+- [API Auth Signing Spec](./api-docs/current/docs/API_AUTH_SIGNING_SPEC.md)
+- [Errors, Retries, and Failure Policy](./api-docs/current/docs/ERRORS_RETRIES_AND_FAILURE_POLICY.md)
+- [SDK Blueprint](./api-docs/current/docs/SDK_BLUEPRINT.md)
+- [Integration Checklist](./api-docs/current/docs/INTEGRATION_CHECKLIST.md)
+- [Complete Endpoint Reference](./api-docs/current/docs/REMOTE_API_REFERENCE_COMPLETE.md)

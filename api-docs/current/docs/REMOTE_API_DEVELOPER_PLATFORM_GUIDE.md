@@ -11,7 +11,7 @@ ClawPad can run as a local API platform server with:
 - REST API for control/data operations
 - WebSocket stream for real-time events
 - Signed authentication model (enrollment + token + request signing)
-- API Explorer and searchable developer dashboard
+- GitHub-hosted, release-aligned documentation bundle
 
 This enables ClawPad to act as an application backend for local assistants,
 automation pipelines, workflow engines, and integration tools.
@@ -39,12 +39,12 @@ Use when developers need both UI and API, including rendered UI workflows.
 - OpenAPI Swagger UI: `http://127.0.0.1:18790/docs`
 - ReDoc: `http://127.0.0.1:18790/redoc`
 - OpenAPI JSON: `http://127.0.0.1:18790/openapi.json`
-- Searchable developer dashboard (HTML): `http://127.0.0.1:18790/developer/dashboard`
 - Dashboard JSON: `GET /api/developer/dashboard`
 - Developer docs index/search: `GET /api/developer/docs`
 - Unified docs + endpoint search: `GET /api/developer/search`
 - Complete endpoint reference JSON: `GET /api/developer/reference`
 - Complete endpoint reference Markdown: `GET /api/developer/reference/markdown`
+- Release-hub docs index: `api-docs/current/docs/articles/INDEX.md`
 
 ## 4. Quickstart Flow
 
@@ -103,17 +103,9 @@ If required data is unavailable, requests fail with actionable error details.
 Use the dashboard endpoint (`/api/developer/dashboard`) to programmatically
 retrieve the current endpoint inventory and category counts.
 
-## 7. Developer Dashboard Usage
+## 7. Documentation Access and API Lookup
 
-### 7.1 In-app access
-
-From ClawPad menu:
-
-- `Developer > API Explorer...`
-- `Developer > Open API Docs in Browser`
-- `Developer > Open Developer Dashboard`
-
-### 7.2 API-based lookup
+### 7.1 GitHub release-hub docs
 
 Docs search example:
 
@@ -132,6 +124,14 @@ Complete reference (all endpoints) example:
 ```bash
 curl -s "http://127.0.0.1:18790/api/developer/reference?limit=1000"
 ```
+
+### 7.2 Recommended docs set for teams
+
+- `QUICKSTART.md` for onboarding
+- `STEALTH_SERVER_PRODUCTION_GUIDE.md` for architecture/ops
+- `API_AUTH_SIGNING_SPEC.md` for implementation contract
+- `ERRORS_RETRIES_AND_FAILURE_POLICY.md` for reliability behavior
+- `SDK_BLUEPRINT.md` and `INTEGRATION_CHECKLIST.md` for production readiness
 
 ## 8. Real-time Events
 
