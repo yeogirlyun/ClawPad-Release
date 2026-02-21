@@ -253,3 +253,18 @@ That's it. No terminal commands, no Docker, no manual configuration.
 *ClawPad is a proprietary application. This repository is for releases only.*
 
 *Copyright 2024-2026 ClawPad. All rights reserved.*
+
+---
+
+## API Docs Bundle (Shipped With Every Binary)
+
+Each published release ships with a version-matched API docs zip asset.
+
+- Location in this repo: `api-docs/current/`
+- Release asset name: `clawpad-api-docs-<release-tag>.zip`
+- Contents:
+  - Human guides (`docs/`)
+  - Comprehensive endpoint reference (`docs/REMOTE_API_REFERENCE_COMPLETE.md`)
+  - Machine-readable endpoint payloads (`reference/*.json`)
+
+Developers can review docs directly on GitHub and download the same docs package bundled with binaries.

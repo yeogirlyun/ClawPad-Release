@@ -1,0 +1,9 @@
+{
+  "version": "0.5.2",
+  "generated_at": "2026-02-21T17:02:47.887874+00:00",
+  "source": "ClawPad endpoint registry and developer docs",
+  "includes": {
+    "docs": "api-docs/current/docs",
+    "reference": "api-docs/current/reference"
+  }
+}

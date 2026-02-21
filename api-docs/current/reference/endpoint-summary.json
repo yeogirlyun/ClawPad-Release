@@ -1,0 +1,29 @@
+{
+  "total": 143,
+  "by_method": {
+    "GET": 66,
+    "POST": 63,
+    "PUT": 5,
+    "DELETE": 8,
+    "WebSocket": 1
+  },
+  "by_category": {
+    "Health & Status": 5,
+    "Developer Docs & Discovery": 11,
+    "Gateway & Connection": 39,
+    "Projects": 7,
+    "Messages & AI": 7,
+    "Files & Artifacts": 6,
+    "Search": 4,
+    "Settings & Config": 16,
+    "Themes & Appearance": 2,
+    "AI Models": 1,
+    "System & Database": 4,
+    "UI Control": 17,
+    "Screenshots": 8,
+    "Extensions & Tools": 15,
+    "WebSocket": 1
+  },
+  "remote": 11,
+  "direct": 10
+}

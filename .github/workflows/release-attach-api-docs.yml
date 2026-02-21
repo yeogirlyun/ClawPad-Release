@@ -1,0 +1,30 @@
+name: Attach API Docs Bundle
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  attach-api-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build docs zip from api-docs/current
+        run: |
+          set -euo pipefail
+          TAG="${{ github.event.release.tag_name }}"
+          mkdir -p dist
+          cp -R api-docs/current "dist/clawpad-api-docs-${TAG}"
+          cd dist
+          zip -r "clawpad-api-docs-${TAG}.zip" "clawpad-api-docs-${TAG}"
+
+      - name: Upload docs bundle to release assets
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.release.tag_name }}
+          files: dist/clawpad-api-docs-${{ github.event.release.tag_name }}.zip

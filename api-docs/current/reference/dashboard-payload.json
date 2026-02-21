@@ -1,0 +1,1806 @@
+{
+  "generated_at": "2026-02-21T17:01:51.905921+00:00",
+  "updated_at": "2026-02-21",
+  "base_url": "http://127.0.0.1:18790",
+  "openapi": {
+    "swagger_ui": "/docs",
+    "redoc": "/redoc",
+    "json": "/openapi.json"
+  },
+  "discovery": {
+    "developer_dashboard": "/developer/dashboard",
+    "dashboard_json": "/api/developer/dashboard",
+    "docs_index": "/api/developer/docs",
+    "docs_article": "/api/developer/docs/{doc_id}",
+    "reference_json": "/api/developer/reference",
+    "reference_markdown": "/api/developer/reference/markdown"
+  },
+  "counts": {
+    "endpoints_total": 143,
+    "endpoint_methods": {
+      "GET": 66,
+      "POST": 63,
+      "PUT": 5,
+      "DELETE": 8,
+      "WebSocket": 1
+    },
+    "endpoint_categories": {
+      "Health & Status": 5,
+      "Developer Docs & Discovery": 11,
+      "Gateway & Connection": 39,
+      "Projects": 7,
+      "Messages & AI": 7,
+      "Files & Artifacts": 6,
+      "Search": 4,
+      "Settings & Config": 16,
+      "Themes & Appearance": 2,
+      "AI Models": 1,
+      "System & Database": 4,
+      "UI Control": 17,
+      "Screenshots": 8,
+      "Extensions & Tools": 15,
+      "WebSocket": 1
+    },
+    "docs_total": 8,
+    "remote_routes": 11,
+    "direct_routes": 10
+  },
+  "docs": [
+    {
+      "doc_id": "quickstart",
+      "title": "Quickstart: Run ClawPad as an API Platform",
+      "category": "Getting Started",
+      "summary": "Start ClawPad in API mode, verify server health, then create and message projects over HTTP in minutes.",
+      "keywords": [
+        "quickstart",
+        "stealth",
+        "api",
+        "getting started",
+        "platform"
+      ],
+      "related_endpoints": [
+        "/health",
+        "/api/auth/enroll/start",
+        "/api/auth/enroll",
+        "/api/auth/token",
+        "/api/projects",
+        "/api/projects/{project_id}/messages",
+        "/developer/dashboard"
+      ],
+      "updated_at": "2026-02-21"
+    },
+    {
+      "doc_id": "stealth-mode",
+      "title": "Stealth Mode: API-Only Server Runtime",
+      "category": "Runtime",
+      "summary": "Use ClawPad in headless offscreen mode for CI/automation and backend-style deployments.",
+      "keywords": [
+        "stealth",
+        "headless",
+        "api-only",
+        "offscreen",
+        "runtime"
+      ],
+      "related_endpoints": [
+        "/health",
+        "/api/state",
+        "/api/app/quit"
+      ],
+      "updated_at": "2026-02-21"
+    },
+    {
+      "doc_id": "auth-signing",
+      "title": "Authentication Model: Enrollment + Signed Requests",
+      "category": "Security",
+      "summary": "ClawPad uses enrollment code exchange, short-lived access tokens, refresh tokens, and per-request Ed25519 signatures.",
+      "keywords": [
+        "auth",
+        "token",
+        "signature",
+        "security",
+        "ed25519",
+        "scope"
+      ],
+      "related_endpoints": [
+        "/api/public/identity",
+        "/api/auth/enroll/start",
+        "/api/auth/enroll",
+        "/api/auth/token",
+        "/api/auth/clients",
+        "/api/auth/clients/{client_id}/revoke"
+      ],
+      "updated_at": "2026-02-21"
+    },
+    {
+      "doc_id": "endpoint-discovery",
+      "title": "Endpoint Discovery and Dashboard",
+      "category": "Developer Experience",
+      "summary": "Discover all available APIs through OpenAPI, category registry, and searchable dashboard endpoints.",
+      "keywords": [
+        "dashboard",
+        "discover",
+        "openapi",
+        "search",
+        "docs"
+      ],
+      "related_endpoints": [
+        "/docs",
+        "/redoc",
+        "/developer/dashboard",
+        "/api/developer/dashboard",
+        "/api/developer/docs"
+      ],
+      "updated_at": "2026-02-21"
+    },
+    {
+      "doc_id": "websocket-events",
+      "title": "WebSocket Event Streaming",
+      "category": "Realtime",
+      "summary": "Consume live ClawPad events over `/ws` and filter by topic for responsive integrations.",
+      "keywords": [
+        "websocket",
+        "realtime",
+        "events",
+        "streaming",
+        "topics"
+      ],
+      "related_endpoints": [
+        "/ws"
+      ],
+      "updated_at": "2026-02-21"
+    },
+    {
+      "doc_id": "error-contract",
+      "title": "Error Contract and Explicit Failure Semantics",
+      "category": "Reliability",
+      "summary": "API responses use a strict envelope with explicit errors; failures are not hidden by synthetic fallback data.",
+      "keywords": [
+        "errors",
+        "failure",
+        "reliability",
+        "no fallback",
+        "contract"
+      ],
+      "related_endpoints": [
+        "/health",
+        "/api/state",
+        "/api/app/quit"
+      ],
+      "updated_at": "2026-02-21"
+    },
+    {
+      "doc_id": "platform-patterns",
+      "title": "Platform Integration Patterns",
+      "category": "Architecture",
+      "summary": "Practical patterns for building external apps on ClawPad: control plane, data plane, and extension orchestration.",
+      "keywords": [
+        "platform",
+        "architecture",
+        "integration",
+        "tools",
+        "workflow"
+      ],
+      "related_endpoints": [
+        "/api/projects",
+        "/api/projects/{project_id}/messages",
+        "/api/tools",
+        "/api/tools/{tool_name}/call",
+        "/api/usage/dashboard"
+      ],
+      "updated_at": "2026-02-21"
+    },
+    {
+      "doc_id": "api-reference-complete",
+      "title": "Complete Remote API Reference (All Endpoints)",
+      "category": "Reference",
+      "summary": "Full endpoint-by-endpoint reference generated from the local registry, including methods, params, request/response examples, and system effects.",
+      "keywords": [
+        "reference",
+        "all endpoints",
+        "api spec",
+        "request example",
+        "response example",
+        "local docs"
+      ],
+      "related_endpoints": [
+        "/api/developer/reference",
+        "/api/developer/reference/markdown",
+        "/api/developer/dashboard",
+        "/docs",
+        "/redoc"
+      ],
+      "updated_at": "2026-02-21"
+    }
+  ],
+  "endpoints": [
+    {
+      "path": "/api/auth/clients",
+      "method": "GET",
+      "category": "Gateway & Connection",
+      "summary": "List Enrolled API Clients",
+      "tags": [
+        "security",
+        "auth",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/auth/enroll/status",
+      "method": "GET",
+      "category": "Gateway & Connection",
+      "summary": "Get Enrollment Status",
+      "tags": [
+        "security",
+        "auth",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/auth/providers",
+      "method": "GET",
+      "category": "Gateway & Connection",
+      "summary": "List Provider Auth Status",
+      "tags": [
+        "security",
+        "auth",
+        "read",
+        "admin"
+      ]
+    },
+    {
+      "path": "/api/auth/providers/{provider}",
+      "method": "GET",
+      "category": "Gateway & Connection",
+      "summary": "Get Provider Auth Status",
+      "tags": [
+        "security",
+        "auth",
+        "read",
+        "admin"
+      ]
+    },
+    {
+      "path": "/api/database/info",
+      "method": "GET",
+      "category": "System & Database",
+      "summary": "Database Info",
+      "tags": [
+        "database",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/developer/dashboard",
+      "method": "GET",
+      "category": "Developer Docs & Discovery",
+      "summary": "Developer Dashboard Payload (JSON)",
+      "tags": [
+        "developer",
+        "dashboard",
+        "json",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/developer/docs",
+      "method": "GET",
+      "category": "Developer Docs & Discovery",
+      "summary": "List/Search Developer Docs",
+      "tags": [
+        "developer",
+        "docs",
+        "search",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/developer/docs/{doc_id}",
+      "method": "GET",
+      "category": "Developer Docs & Discovery",
+      "summary": "Get Developer Doc Article",
+      "tags": [
+        "developer",
+        "docs",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/developer/reference",
+      "method": "GET",
+      "category": "Developer Docs & Discovery",
+      "summary": "Complete Endpoint Reference (JSON)",
+      "tags": [
+        "developer",
+        "reference",
+        "json",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/developer/reference/markdown",
+      "method": "GET",
+      "category": "Developer Docs & Discovery",
+      "summary": "Complete Endpoint Reference (Markdown)",
+      "tags": [
+        "developer",
+        "reference",
+        "markdown",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/developer/search",
+      "method": "GET",
+      "category": "Developer Docs & Discovery",
+      "summary": "Unified Docs + Endpoint Search",
+      "tags": [
+        "developer",
+        "search",
+        "discovery",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/direct/client/status",
+      "method": "GET",
+      "category": "Gateway & Connection",
+      "summary": "Direct Client Status",
+      "tags": [
+        "direct",
+        "client",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/direct/identity",
+      "method": "GET",
+      "category": "Gateway & Connection",
+      "summary": "Direct Fingerprint Identity",
+      "tags": [
+        "direct",
+        "identity",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/direct/server/status",
+      "method": "GET",
+      "category": "Gateway & Connection",
+      "summary": "Direct Server Status",
+      "tags": [
+        "direct",
+        "server",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/direct/status",
+      "method": "GET",
+      "category": "Gateway & Connection",
+      "summary": "Direct Link Status",
+      "tags": [
+        "direct",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/extensions",
+      "method": "GET",
+      "category": "Extensions & Tools",
+      "summary": "List Installed",
+      "tags": [
+        "extensions",
+        "installed",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/extensions/catalog",
+      "method": "GET",
+      "category": "Extensions & Tools",
+      "summary": "Browse Extension Catalog",
+      "tags": [
+        "extensions",
+        "catalog",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/extensions/catalog/search",
+      "method": "GET",
+      "category": "Extensions & Tools",
+      "summary": "Search Catalog",
+      "tags": [
+        "extensions",
+        "catalog",
+        "search",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/extensions/catalog/{extension_id}",
+      "method": "GET",
+      "category": "Extensions & Tools",
+      "summary": "Get Catalog Entry",
+      "tags": [
+        "extensions",
+        "catalog",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/extensions/categories",
+      "method": "GET",
+      "category": "Extensions & Tools",
+      "summary": "List Categories",
+      "tags": [
+        "extensions",
+        "categories",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/extensions/{extension_id}",
+      "method": "GET",
+      "category": "Extensions & Tools",
+      "summary": "Get Installed Extension",
+      "tags": [
+        "extensions",
+        "installed",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/gateway/status",
+      "method": "GET",
+      "category": "Gateway & Connection",
+      "summary": "Gateway Status",
+      "tags": [
+        "gateway",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/local-model/providers/status",
+      "method": "GET",
+      "category": "Settings & Config",
+      "summary": "Local Provider Chain Status",
+      "tags": [
+        "settings",
+        "local-model",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/local-model/status",
+      "method": "GET",
+      "category": "Settings & Config",
+      "summary": "Local Model Status",
+      "tags": [
+        "settings",
+        "local-model",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/models",
+      "method": "GET",
+      "category": "AI Models",
+      "summary": "List AI Models",
+      "tags": [
+        "models",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/notifications",
+      "method": "GET",
+      "category": "System & Database",
+      "summary": "List Notifications",
+      "tags": [
+        "notifications",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/openclaw-gateway/status",
+      "method": "GET",
+      "category": "Settings & Config",
+      "summary": "OpenClaw Gateway Status",
+      "tags": [
+        "settings",
+        "openclaw",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/openclaw/settings",
+      "method": "GET",
+      "category": "Settings & Config",
+      "summary": "OpenClaw Tab Settings",
+      "tags": [
+        "settings",
+        "openclaw",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/projects",
+      "method": "GET",
+      "category": "Projects",
+      "summary": "List Projects",
+      "tags": [
+        "projects",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/projects/{project_id}",
+      "method": "GET",
+      "category": "Projects",
+      "summary": "Get Project",
+      "tags": [
+        "projects",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/projects/{project_id}/files",
+      "method": "GET",
+      "category": "Files & Artifacts",
+      "summary": "List Files",
+      "tags": [
+        "files",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/projects/{project_id}/files/stats",
+      "method": "GET",
+      "category": "Files & Artifacts",
+      "summary": "File Statistics",
+      "tags": [
+        "files",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/projects/{project_id}/files/{file_id}",
+      "method": "GET",
+      "category": "Files & Artifacts",
+      "summary": "Get File",
+      "tags": [
+        "files",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/projects/{project_id}/messages",
+      "method": "GET",
+      "category": "Messages & AI",
+      "summary": "List Messages",
+      "tags": [
+        "messages",
+        "ai",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/projects/{project_id}/messages/{message_id}",
+      "method": "GET",
+      "category": "Messages & AI",
+      "summary": "Get Message",
+      "tags": [
+        "messages",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/projects/{project_id}/search/files",
+      "method": "GET",
+      "category": "Search",
+      "summary": "Search Project Files",
+      "tags": [
+        "search",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/projects/{project_id}/search/messages",
+      "method": "GET",
+      "category": "Search",
+      "summary": "Search Project Messages",
+      "tags": [
+        "search",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/public/identity",
+      "method": "GET",
+      "category": "Health & Status",
+      "summary": "Public API Identity",
+      "tags": [
+        "security",
+        "identity",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/remote/client/execution-mode",
+      "method": "GET",
+      "category": "Gateway & Connection",
+      "summary": "Get Client Execution Mode",
+      "tags": [
+        "remote",
+        "client",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/remote/client/status",
+      "method": "GET",
+      "category": "Gateway & Connection",
+      "summary": "Remote Client Status",
+      "tags": [
+        "remote",
+        "client",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/remote/server/status",
+      "method": "GET",
+      "category": "Gateway & Connection",
+      "summary": "Remote Server Status",
+      "tags": [
+        "remote",
+        "server",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/screenshot",
+      "method": "GET",
+      "category": "Screenshots",
+      "summary": "Capture Screenshot (Transient)",
+      "tags": [
+        "screenshots",
+        "capture",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/screenshot/full",
+      "method": "GET",
+      "category": "Screenshots",
+      "summary": "Capture Full-Window Screenshot",
+      "tags": [
+        "screenshots",
+        "capture",
+        "full-window",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/screenshots",
+      "method": "GET",
+      "category": "Screenshots",
+      "summary": "List Screenshots",
+      "tags": [
+        "screenshots",
+        "list",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/screenshots/{screenshot_id}",
+      "method": "GET",
+      "category": "Screenshots",
+      "summary": "Get Screenshot Metadata",
+      "tags": [
+        "screenshots",
+        "metadata",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/screenshots/{screenshot_id}/image",
+      "method": "GET",
+      "category": "Screenshots",
+      "summary": "Get Screenshot Image",
+      "tags": [
+        "screenshots",
+        "image",
+        "binary",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/screenshots/{screenshot_id}/thumbnail",
+      "method": "GET",
+      "category": "Screenshots",
+      "summary": "Get Screenshot Thumbnail",
+      "tags": [
+        "screenshots",
+        "thumbnail",
+        "binary",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/search/messages",
+      "method": "GET",
+      "category": "Search",
+      "summary": "Global Message Search",
+      "tags": [
+        "search",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/search/projects",
+      "method": "GET",
+      "category": "Search",
+      "summary": "Search Projects",
+      "tags": [
+        "search",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/settings",
+      "method": "GET",
+      "category": "Settings & Config",
+      "summary": "Get Settings",
+      "tags": [
+        "settings",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/state",
+      "method": "GET",
+      "category": "Health & Status",
+      "summary": "Get App State",
+      "tags": [
+        "state",
+        "monitoring"
+      ]
+    },
+    {
+      "path": "/api/themes",
+      "method": "GET",
+      "category": "Themes & Appearance",
+      "summary": "List Themes",
+      "tags": [
+        "themes",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/tools",
+      "method": "GET",
+      "category": "Extensions & Tools",
+      "summary": "List All Tools",
+      "tags": [
+        "tools",
+        "discovery",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/tools/{tool_name}/schema",
+      "method": "GET",
+      "category": "Extensions & Tools",
+      "summary": "Get Tool Schema",
+      "tags": [
+        "tools",
+        "schema",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/ui/current-view",
+      "method": "GET",
+      "category": "UI Control",
+      "summary": "Get Current View",
+      "tags": [
+        "ui",
+        "state",
+        "inspection",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/ui/element-geometry/{element_name}",
+      "method": "GET",
+      "category": "UI Control",
+      "summary": "Get Element Geometry",
+      "tags": [
+        "ui",
+        "geometry",
+        "automation",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/ui/elements",
+      "method": "GET",
+      "category": "UI Control",
+      "summary": "List Supported UI Elements",
+      "tags": [
+        "ui",
+        "inventory",
+        "automation",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/ui/widget-tree",
+      "method": "GET",
+      "category": "UI Control",
+      "summary": "Get Widget Tree",
+      "tags": [
+        "ui",
+        "inspection",
+        "accessibility",
+        "automation",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/usage/dashboard",
+      "method": "GET",
+      "category": "Settings & Config",
+      "summary": "Usage Dashboard",
+      "tags": [
+        "settings",
+        "usage",
+        "analytics",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/version",
+      "method": "GET",
+      "category": "Health & Status",
+      "summary": "Get Version",
+      "tags": [
+        "health",
+        "version"
+      ]
+    },
+    {
+      "path": "/developer/dashboard",
+      "method": "GET",
+      "category": "Developer Docs & Discovery",
+      "summary": "Developer Dashboard (HTML)",
+      "tags": [
+        "developer",
+        "dashboard",
+        "html",
+        "read"
+      ]
+    },
+    {
+      "path": "/docs",
+      "method": "GET",
+      "category": "Developer Docs & Discovery",
+      "summary": "OpenAPI Swagger UI",
+      "tags": [
+        "developer",
+        "openapi",
+        "swagger",
+        "docs",
+        "read"
+      ]
+    },
+    {
+      "path": "/docs/oauth2-redirect",
+      "method": "GET",
+      "category": "Developer Docs & Discovery",
+      "summary": "Swagger OAuth Redirect",
+      "tags": [
+        "developer",
+        "openapi",
+        "swagger",
+        "oauth",
+        "read"
+      ]
+    },
+    {
+      "path": "/health",
+      "method": "GET",
+      "category": "Health & Status",
+      "summary": "Health Check",
+      "tags": [
+        "health",
+        "monitoring"
+      ]
+    },
+    {
+      "path": "/openapi.json",
+      "method": "GET",
+      "category": "Developer Docs & Discovery",
+      "summary": "OpenAPI Schema JSON",
+      "tags": [
+        "developer",
+        "openapi",
+        "schema",
+        "json",
+        "read"
+      ]
+    },
+    {
+      "path": "/redoc",
+      "method": "GET",
+      "category": "Developer Docs & Discovery",
+      "summary": "OpenAPI ReDoc",
+      "tags": [
+        "developer",
+        "openapi",
+        "redoc",
+        "docs",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/app/quit",
+      "method": "POST",
+      "category": "Health & Status",
+      "summary": "Quit Application",
+      "tags": [
+        "lifecycle",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/auth/clients/revoke-all",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Revoke All API Clients",
+      "tags": [
+        "security",
+        "auth",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/auth/clients/{client_id}/revoke",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Revoke API Client",
+      "tags": [
+        "security",
+        "auth",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/auth/enroll",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Enroll API Client",
+      "tags": [
+        "security",
+        "auth",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/auth/enroll/cancel",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Cancel Enrollment Code",
+      "tags": [
+        "security",
+        "auth",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/auth/enroll/start",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Start API Enrollment",
+      "tags": [
+        "security",
+        "auth",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/auth/providers/anthropic/sign-in",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Sign In Anthropic Provider",
+      "tags": [
+        "security",
+        "auth",
+        "write",
+        "admin"
+      ]
+    },
+    {
+      "path": "/api/auth/providers/{provider}/api-key/reset",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Reset Provider API Key",
+      "tags": [
+        "security",
+        "auth",
+        "write",
+        "admin"
+      ]
+    },
+    {
+      "path": "/api/auth/providers/{provider}/token/reset",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Reset Provider Auth Token",
+      "tags": [
+        "security",
+        "auth",
+        "write",
+        "admin"
+      ]
+    },
+    {
+      "path": "/api/auth/token",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Refresh Access Token",
+      "tags": [
+        "security",
+        "auth",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/database/backup",
+      "method": "POST",
+      "category": "System & Database",
+      "summary": "Create Backup",
+      "tags": [
+        "database",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/direct/client/connect",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Connect Direct Client",
+      "tags": [
+        "direct",
+        "client",
+        "security",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/direct/client/disconnect",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Disconnect Direct Client",
+      "tags": [
+        "direct",
+        "client",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/direct/client/rpc",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Direct Client RPC",
+      "tags": [
+        "direct",
+        "client",
+        "rpc",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/direct/server/rotate-codes",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Rotate Direct Pairing Codes",
+      "tags": [
+        "direct",
+        "server",
+        "security",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/direct/server/start",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Start Direct Server",
+      "tags": [
+        "direct",
+        "server",
+        "security",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/direct/server/stop",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Stop Direct Server",
+      "tags": [
+        "direct",
+        "server",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/extensions/{extension_id}/enable",
+      "method": "POST",
+      "category": "Extensions & Tools",
+      "summary": "Enable/Disable Extension",
+      "tags": [
+        "extensions",
+        "config",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/extensions/{extension_id}/env",
+      "method": "POST",
+      "category": "Extensions & Tools",
+      "summary": "Set Environment Variable",
+      "tags": [
+        "extensions",
+        "config",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/extensions/{extension_id}/install",
+      "method": "POST",
+      "category": "Extensions & Tools",
+      "summary": "Install Extension",
+      "tags": [
+        "extensions",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/extensions/{extension_id}/start",
+      "method": "POST",
+      "category": "Extensions & Tools",
+      "summary": "Start Extension",
+      "tags": [
+        "extensions",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/extensions/{extension_id}/stop",
+      "method": "POST",
+      "category": "Extensions & Tools",
+      "summary": "Stop Extension",
+      "tags": [
+        "extensions",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/gateway/reconnect",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Reconnect Gateway",
+      "tags": [
+        "gateway",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/gateway/restart",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Restart Gateway",
+      "tags": [
+        "gateway",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/local-model/download",
+      "method": "POST",
+      "category": "Settings & Config",
+      "summary": "Download Local Model",
+      "tags": [
+        "settings",
+        "local-model",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/local-model/providers/probe",
+      "method": "POST",
+      "category": "Settings & Config",
+      "summary": "Probe Local Provider",
+      "tags": [
+        "settings",
+        "local-model",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/local-model/runtime/install",
+      "method": "POST",
+      "category": "Settings & Config",
+      "summary": "Install Local Runtime",
+      "tags": [
+        "settings",
+        "local-model",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/openclaw-gateway/benchmark",
+      "method": "POST",
+      "category": "Settings & Config",
+      "summary": "Run OpenClaw A/B Benchmark",
+      "tags": [
+        "settings",
+        "openclaw",
+        "benchmark",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/openclaw-gateway/query",
+      "method": "POST",
+      "category": "Settings & Config",
+      "summary": "Query OpenClaw Gateway",
+      "tags": [
+        "settings",
+        "openclaw",
+        "write",
+        "testing"
+      ]
+    },
+    {
+      "path": "/api/openclaw-gateway/restart",
+      "method": "POST",
+      "category": "Settings & Config",
+      "summary": "Restart OpenClaw Gateway",
+      "tags": [
+        "settings",
+        "openclaw",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/openclaw-gateway/start",
+      "method": "POST",
+      "category": "Settings & Config",
+      "summary": "Start OpenClaw Gateway",
+      "tags": [
+        "settings",
+        "openclaw",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/openclaw-gateway/stop",
+      "method": "POST",
+      "category": "Settings & Config",
+      "summary": "Stop OpenClaw Gateway",
+      "tags": [
+        "settings",
+        "openclaw",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/projects",
+      "method": "POST",
+      "category": "Projects",
+      "summary": "Create Project",
+      "tags": [
+        "projects",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/projects/{project_id}/export",
+      "method": "POST",
+      "category": "Messages & AI",
+      "summary": "Export Chat",
+      "tags": [
+        "messages",
+        "export",
+        "read"
+      ]
+    },
+    {
+      "path": "/api/projects/{project_id}/files",
+      "method": "POST",
+      "category": "Files & Artifacts",
+      "summary": "Add File",
+      "tags": [
+        "files",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/projects/{project_id}/files/{file_id}/star",
+      "method": "POST",
+      "category": "Files & Artifacts",
+      "summary": "Toggle Star",
+      "tags": [
+        "files",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/projects/{project_id}/messages",
+      "method": "POST",
+      "category": "Messages & AI",
+      "summary": "Send Message",
+      "tags": [
+        "messages",
+        "ai",
+        "write",
+        "context-injection"
+      ]
+    },
+    {
+      "path": "/api/projects/{project_id}/messages/{message_id}/regenerate",
+      "method": "POST",
+      "category": "Messages & AI",
+      "summary": "Regenerate Response",
+      "tags": [
+        "messages",
+        "ai",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/projects/{project_id}/pin",
+      "method": "POST",
+      "category": "Projects",
+      "summary": "Toggle Pin",
+      "tags": [
+        "projects",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/projects/{project_id}/select",
+      "method": "POST",
+      "category": "Projects",
+      "summary": "Select Project",
+      "tags": [
+        "projects",
+        "ui",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/remote/client/connect",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Connect Remote Client",
+      "tags": [
+        "remote",
+        "client",
+        "security",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/remote/client/disconnect",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Disconnect Remote Client",
+      "tags": [
+        "remote",
+        "client",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/remote/client/rpc",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Remote Client RPC",
+      "tags": [
+        "remote",
+        "client",
+        "rpc",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/remote/client/send-message",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Send Message (Client Mode)",
+      "tags": [
+        "remote",
+        "client",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/remote/server/disable",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Disable Remote Server",
+      "tags": [
+        "remote",
+        "server",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/remote/server/rotate-codes",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Rotate Remote Server Codes",
+      "tags": [
+        "remote",
+        "server",
+        "security",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/remote/server/start",
+      "method": "POST",
+      "category": "Gateway & Connection",
+      "summary": "Start Remote Server",
+      "tags": [
+        "remote",
+        "server",
+        "security",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/screenshots/capture",
+      "method": "POST",
+      "category": "Screenshots",
+      "summary": "Capture & Save Screenshot",
+      "tags": [
+        "screenshots",
+        "capture",
+        "database",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/themes/{theme_name}",
+      "method": "POST",
+      "category": "Themes & Appearance",
+      "summary": "Apply Theme",
+      "tags": [
+        "themes",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/tools/{tool_name}/call",
+      "method": "POST",
+      "category": "Extensions & Tools",
+      "summary": "Execute Tool",
+      "tags": [
+        "tools",
+        "execute",
+        "write",
+        "platform"
+      ]
+    },
+    {
+      "path": "/api/ui/check-for-updates",
+      "method": "POST",
+      "category": "UI Control",
+      "summary": "Check for Updates",
+      "tags": [
+        "ui",
+        "updates",
+        "system",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/ui/click",
+      "method": "POST",
+      "category": "UI Control",
+      "summary": "Click Element",
+      "tags": [
+        "ui",
+        "interaction",
+        "automation",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/ui/key-press",
+      "method": "POST",
+      "category": "UI Control",
+      "summary": "Send Key Press",
+      "tags": [
+        "ui",
+        "keyboard",
+        "interaction",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/ui/open-settings",
+      "method": "POST",
+      "category": "UI Control",
+      "summary": "Open Settings",
+      "tags": [
+        "ui",
+        "navigation",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/ui/resize-window",
+      "method": "POST",
+      "category": "UI Control",
+      "summary": "Resize Window",
+      "tags": [
+        "ui",
+        "window",
+        "automation",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/ui/scroll",
+      "method": "POST",
+      "category": "UI Control",
+      "summary": "Scroll View",
+      "tags": [
+        "ui",
+        "scroll",
+        "interaction",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/ui/scroll-to-bottom",
+      "method": "POST",
+      "category": "UI Control",
+      "summary": "Scroll to Bottom",
+      "tags": [
+        "ui",
+        "scroll",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/ui/set-input-text",
+      "method": "POST",
+      "category": "UI Control",
+      "summary": "Set Input Text",
+      "tags": [
+        "ui",
+        "input",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/ui/set-sidebar-visible",
+      "method": "POST",
+      "category": "UI Control",
+      "summary": "Set Sidebar Visibility",
+      "tags": [
+        "ui",
+        "sidebar",
+        "navigation",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/ui/settings-tab/{tab_name}",
+      "method": "POST",
+      "category": "UI Control",
+      "summary": "Switch Settings Tab",
+      "tags": [
+        "ui",
+        "navigation",
+        "settings",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/ui/show-chat",
+      "method": "POST",
+      "category": "UI Control",
+      "summary": "Show Chat View",
+      "tags": [
+        "ui",
+        "navigation",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/ui/show-extensions",
+      "method": "POST",
+      "category": "UI Control",
+      "summary": "Show Extensions View",
+      "tags": [
+        "ui",
+        "navigation",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/ui/toggle-sidebar",
+      "method": "POST",
+      "category": "UI Control",
+      "summary": "Toggle Sidebar",
+      "tags": [
+        "ui",
+        "sidebar",
+        "navigation",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/auth/providers/{provider}/api-key",
+      "method": "PUT",
+      "category": "Gateway & Connection",
+      "summary": "Set Provider API Key",
+      "tags": [
+        "security",
+        "auth",
+        "write",
+        "admin"
+      ]
+    },
+    {
+      "path": "/api/openclaw/settings",
+      "method": "PUT",
+      "category": "Settings & Config",
+      "summary": "Update OpenClaw Tab Settings",
+      "tags": [
+        "settings",
+        "openclaw",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/projects/{project_id}",
+      "method": "PUT",
+      "category": "Projects",
+      "summary": "Update Project",
+      "tags": [
+        "projects",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/remote/client/execution-mode",
+      "method": "PUT",
+      "category": "Gateway & Connection",
+      "summary": "Set Client Execution Mode",
+      "tags": [
+        "remote",
+        "client",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/settings",
+      "method": "PUT",
+      "category": "Settings & Config",
+      "summary": "Update Settings",
+      "tags": [
+        "settings",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/auth/providers/{provider}/api-key",
+      "method": "DELETE",
+      "category": "Gateway & Connection",
+      "summary": "Clear Provider API Key",
+      "tags": [
+        "security",
+        "auth",
+        "write",
+        "admin"
+      ]
+    },
+    {
+      "path": "/api/extensions/{extension_id}",
+      "method": "DELETE",
+      "category": "Extensions & Tools",
+      "summary": "Uninstall Extension",
+      "tags": [
+        "extensions",
+        "write",
+        "destructive"
+      ]
+    },
+    {
+      "path": "/api/notifications",
+      "method": "DELETE",
+      "category": "System & Database",
+      "summary": "Clear Notifications",
+      "tags": [
+        "notifications",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/projects/{project_id}",
+      "method": "DELETE",
+      "category": "Projects",
+      "summary": "Delete Project",
+      "tags": [
+        "projects",
+        "write",
+        "destructive"
+      ]
+    },
+    {
+      "path": "/api/projects/{project_id}/files/{file_id}",
+      "method": "DELETE",
+      "category": "Files & Artifacts",
+      "summary": "Delete File",
+      "tags": [
+        "files",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/projects/{project_id}/messages",
+      "method": "DELETE",
+      "category": "Messages & AI",
+      "summary": "Clear All Messages",
+      "tags": [
+        "messages",
+        "write",
+        "destructive"
+      ]
+    },
+    {
+      "path": "/api/projects/{project_id}/messages/{message_id}",
+      "method": "DELETE",
+      "category": "Messages & AI",
+      "summary": "Delete Message",
+      "tags": [
+        "messages",
+        "write"
+      ]
+    },
+    {
+      "path": "/api/screenshots/{screenshot_id}",
+      "method": "DELETE",
+      "category": "Screenshots",
+      "summary": "Delete Screenshot",
+      "tags": [
+        "screenshots",
+        "delete",
+        "write",
+        "destructive"
+      ]
+    },
+    {
+      "path": "/ws",
+      "method": "WebSocket",
+      "category": "WebSocket",
+      "summary": "Real-Time Events",
+      "tags": [
+        "websocket",
+        "realtime",
+        "streaming"
+      ]
+    }
+  ]
+}
