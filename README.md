@@ -5,7 +5,7 @@
 <h1 align="center">ClawPad</h1>
 
 <p align="center">
-  <strong>The OpenClaw Desktop Experience — Telegram-style AI Workspace</strong>
+  <strong>Local-First Native AI Workspace + Production Remote API Platform</strong>
 </p>
 
 <p align="center">
@@ -13,268 +13,165 @@
     <img src="https://img.shields.io/github/v/release/yeogirlyun/ClawPad-Release?style=for-the-badge&color=7c3aed" alt="Latest Release">
   </a>
   <a href="https://www.clawpad.ai">
-    <img src="https://img.shields.io/badge/Website-clawpad.ai-blue?style=for-the-badge" alt="Website">
+    <img src="https://img.shields.io/badge/Product-clawpad.ai-blue?style=for-the-badge" alt="Website">
   </a>
   <a href="https://github.com/yeogirlyun/ClawPad-Release/releases/latest">
     <img src="https://img.shields.io/badge/Platform-macOS-lightgrey?style=for-the-badge&logo=apple" alt="macOS">
-  </a>
-  <a href="#">
-    <img src="https://img.shields.io/badge/Price-Free-brightgreen?style=for-the-badge" alt="Free">
   </a>
 </p>
 
 ---
 
-## What is ClawPad?
+## What This Repository Is
 
-ClawPad is a native desktop AI workspace that makes it effortless to install, manage, and use [OpenClaw Gateway](https://openclaw.ai). Think of it as **Telegram for AI** — a beautiful, organized interface where every conversation lives in its own topic with dedicated context, files, and history.
+This is the **official release repository** for ClawPad binaries and release assets.
 
-ClawPad automatically installs and manages OpenClaw Gateway, giving you seamless AI access across your desktop and every connected messaging channel (Telegram, Discord, WhatsApp, LINE, and more).
+- Download DMG builds
+- Read release notes
+- Access version-matched API docs bundles
 
-**100% Free. No subscriptions. No hidden fees.**
+For full product details, architecture, and user-facing workflows:
 
----
-
-## Key Benefits
-
-| | Benefit | Description |
-|---|---------|-------------|
-| 🚀 | **One-Click Setup** | ClawPad installs OpenClaw Gateway automatically. No terminal commands, no Docker, no manual configuration. |
-| 🧠 | **Unified AI Memory** | Every conversation has context. ClawPad injects topic names, recent history, and relevant files into every message — your AI always knows what you're working on. |
-| 📁 | **Project Isolation** | Each topic is an isolated workspace with its own history, files, and context. Work on multiple projects simultaneously without mixing context. |
-| 🎨 | **Rich Workspace** | Beautiful native interface with 9 art-inspired themes (Starry Night, Klimt Golden, Monet Lilies, and more). |
-| 🔄 | **Multi-Model Support** | Switch between Claude, GPT-4, Gemini, and Grok with one click. Your choice syncs globally across all connected channels. |
-| 📱 | **Channel Mirrors** | Browse your Telegram, Discord, LINE, and WhatsApp conversations right inside ClawPad. |
-| 💻 | **Native Performance** | Built with PyQt6 — not Electron. Fast startup, smooth scrolling, proper macOS integration. |
-| 🔒 | **Local-First Privacy** | Local SQLite database, encrypted API keys, no cloud storage. Your data stays on your device. |
-| 🔧 | **Full Data Control** | Database backup/restore, export conversations, manage API keys. You own everything. |
-| 🧩 | **Smart Context Injection** | Configurable context modes (auto/full/minimal/off), history depth, file inclusion, and token budgets. |
+- [clawpad.ai](https://www.clawpad.ai)
 
 ---
 
-## Features
+## ClawPad at a Glance
 
-### Core Capabilities
+ClawPad is a native PyQt6 desktop AI workspace with a **local-first architecture**.
 
-- **Smart Context Injection** — ClawPad's superpower. Every message includes topic name, recent history, and relevant files — the AI always knows exactly what you're working on.
-- **Multi-Model Support** — Switch between Claude, GPT-4, Gemini, and Grok with one click. Your choice syncs globally.
-- **Topic-Based Organization** — Each topic is an isolated workspace with its own history, files, and context.
-- **Channel Mirrors** — Browse Telegram, Discord, LINE, and WhatsApp conversations inside ClawPad.
-- **Parallel Conversations** — Start a chat, switch topics, and both continue streaming simultaneously.
-- **File Management** — Attach files to topics. Track inputs and AI-generated outputs with version history and lineage.
-
-### Design & Experience
-
-- **Unified Memory** — Seamless sync across all channels via OpenClaw Gateway.
-- **Private & Secure** — Local SQLite database, encrypted API keys, no cloud storage.
-- **9 Art-Inspired Themes** — Starry Night, Klimt Golden, Monet Lilies, and more.
-- **Native Performance** — Built with PyQt6 for fast startup and smooth scrolling.
-- **Full Control** — Database backup/restore, connection management, API key configuration.
-- **Code & Markdown** — Full syntax highlighting, markdown rendering, and copy buttons for code blocks.
+- Default AI path is on-device (`local_openai`, `qwen3-4b-q4`) so users can start without cloud keys
+- Hybrid routing supports local + cloud decisions with explicit confidence/gate traces
+- Topic-based workspaces keep files, history, context, and model settings isolated
+- Embedded OpenClaw runtime powers channels, tools, and automation
+- Remote API is first-class: automation, UI control, screenshots, extensions, settings, and direct-link workflows
 
 ---
 
-## Developer Remote API
+## Core Technical Achievements
 
-ClawPad includes a comprehensive REST API and WebSocket interface, enabling developers to build applications on top of ClawPad's rich AI conversation data.
+These are the headline capabilities aligned with current architecture and requirements (`v0.5.2`):
 
-### Why Build on ClawPad?
+1. **Local-first AI runtime (no-key start)**
+   - Embedded local model workflow enabled by default
+   - Cloud keys become optional, not mandatory
 
-ClawPad isn't just a chat client — it's an **AI data platform**. Every conversation includes:
+2. **Deterministic hybrid routing with observability**
+   - Local/cloud decisions include confidence + gate trace metadata
+   - Message/runtime telemetry supports reliability and optimization analysis
 
-- **AI responses with full context** — model provider, model ID, streaming state, context injection metadata
-- **Per-topic model switching** — each project can use a different AI model
-- **Global memory and context injection** — configurable modes (auto/full/minimal/off) with token budgets
-- **File lineage tracking** — which AI message generated a file, input/output file relationships, token counts
-- **Real-time events** via WebSocket — message created, project updated, streaming state changes
+3. **Production Remote API platform**
+   - **143 documented endpoints** + WebSocket stream
+   - **15 categories**, including UI automation and extension/tool control
 
-All of this data is accessible via the Remote API for developers to build analytics dashboards, workflow automation, AI pipelines, and more.
+4. **Signed API security model**
+   - `/api/*` is authenticated by default
+   - Client enrollment + request signing headers documented in API auth spec
 
-### API Overview
+5. **Direct TLS remote mode (no hub relay dependency)**
+   - Secure ticket-based pairing and direct client/server execution mode
+   - Remote-server lifecycle and compatibility RPCs documented
 
-| Category | Endpoints | Description |
-|----------|-----------|-------------|
-| 💚 Health & Status | 4 | Server health, version, app state, uptime |
-| 📁 Projects | 7 | Create, list, get, update, pin, select, delete topics |
-| 💬 Messages & AI | 7 | Send messages, get AI responses, export conversations |
-| 📎 Files & Artifacts | 6 | Manage files with lineage tracking and token counts |
-| 🔍 Search | 4 | Global search, project-scoped search, file search |
-| ⚙️ Settings & Config | 2 | Get/update context injection settings, system prompts |
-| 🎨 Themes | 2 | List and switch between 9 art-inspired themes |
-| 🤖 AI Models | 1 | List available AI models across all providers |
-| 🔌 Gateway | 3 | Connection status, reconnect, gateway info |
-| 🗄️ System | 4 | Database info, backup, notifications |
-| 📡 WebSocket | 1 | Real-time event streaming |
+6. **MCP extension operations + reliability controls**
+   - Catalog/install/start/stop/env/update APIs
+   - Health probing, explicit failure contracts, and reliability metric surfaces
 
-**41 endpoints** across **11 categories** — all accessible at `http://127.0.0.1:18790`
+7. **Multi-instance runtime leadership controls**
+   - API/bot/gateway ownership safety with fingerprint-aware lifecycle behavior
 
-### Quick Start
-
-```bash
-# Launch ClawPad with API enabled
-./ClawPad.app/Contents/MacOS/ClawPad --api
-
-# Or run headless (no UI) for automation
-./ClawPad.app/Contents/MacOS/ClawPad --stealth
-```
-
-### Example: Send a Message and Get AI Response
-
-```bash
-# Create a new topic
-curl -X POST http://127.0.0.1:18790/api/projects \
-  -H "Content-Type: application/json" \
-  -d '{"name": "My AI Project"}'
-
-# Send a message and wait for AI response
-curl -X POST http://127.0.0.1:18790/api/projects/{project_id}/messages \
-  -H "Content-Type: application/json" \
-  -d '{"content": "Explain quantum computing in simple terms", "wait_for_response": true}'
-```
-
-```python
-import requests
-
-BASE = "http://127.0.0.1:18790"
-
-# Create project
-project = requests.post(f"{BASE}/api/projects", json={"name": "My AI Project"}).json()
-project_id = project["data"]["id"]
-
-# Send message with AI response
-response = requests.post(
-    f"{BASE}/api/projects/{project_id}/messages",
-    json={"content": "Explain quantum computing", "wait_for_response": True}
-).json()
-
-print(response["data"]["content"])         # AI response text
-print(response["data"]["model_provider"])  # "anthropic"
-print(response["data"]["model_id"])        # "claude-sonnet-4-20250514"
-```
-
-### Built-in API Explorer
-
-ClawPad includes a built-in **API Explorer** window accessible via the **Developer** menu (`Cmd+Shift+D`). Features include:
-
-- Searchable endpoint browser with 11 categories
-- Interactive parameter editor for path, query, and body params
-- One-click request execution with response viewer
-- Auto-generated cURL and Python code examples
-- Live connection status monitoring with latency display
-- Full theme integration (all 9 themes supported)
-
-### Stealth Mode
-
-Run ClawPad in headless mode for CI/CD pipelines, automation, and server-side deployment:
-
-```bash
-# Headless API-only mode
-./ClawPad.app/Contents/MacOS/ClawPad --stealth --api-port 18790
-```
-
-### WebSocket Real-Time Events
-
-```python
-import asyncio
-import websockets
-import json
-
-async def listen():
-    async with websockets.connect("ws://127.0.0.1:18790/ws") as ws:
-        await ws.send(json.dumps({"type": "subscribe", "channel": "all"}))
-        async for message in ws:
-            event = json.loads(message)
-            print(f"Event: {event['type']} - {event.get('data', {})}")
-
-asyncio.run(listen())
-```
+8. **Release integrity workflow**
+   - RRA gate + release preflight + signed/notarized distribution + matched docs bundle
 
 ---
 
-## Supported AI Models
+## Product Features
 
-| Provider | Models |
-|----------|--------|
-| **Anthropic** | Claude Sonnet 4, Claude Opus 4, Claude 3.5 Sonnet, Claude 3.5 Haiku |
-| **OpenAI** | GPT-4o, GPT-4o Mini, GPT-4 Turbo, o1, o1-mini |
-| **Google** | Gemini 2.0 Flash, Gemini 1.5 Pro, Gemini 1.5 Flash |
-| **xAI** | Grok |
+- Topic-centric AI workspace (Telegram-style navigation, chat continuity)
+- Per-topic model and routing controls
+- File ingestion, search, and artifact management
+- Channel-connected workflows (desktop + messaging channels)
+- Extension ecosystem via MCP
+- Theme system and native desktop UX
+- Built-in API Explorer for live endpoint execution/testing
 
----
+For product deep dive and visuals:
 
-## Messenger Integrations
-
-Chat with AI across all your messaging platforms — powered by OpenClaw Gateway:
-
-| Platform | Status |
-|----------|--------|
-| Telegram | ✅ Supported |
-| WhatsApp | ✅ Supported |
-| Discord | ✅ Supported |
-| LINE | ✅ Supported |
-| Facebook Messenger | ✅ Supported |
-| WeChat | 🔄 Coming Soon |
-| Slack | 🔄 Coming Soon |
-| Signal | 🔄 Coming Soon |
+- [clawpad.ai](https://www.clawpad.ai)
 
 ---
 
-## Installation
+## API Coverage (Documented)
 
-### Requirements
+Current API snapshot (`api-docs/current/reference/endpoint-summary.json`):
 
-- macOS 13.0 (Ventura) or later
-- Apple Silicon (M1/M2/M3/M4) or Intel Mac
+- **Total:** 143
+- **Methods:** GET 66, POST 63, PUT 5, DELETE 8, WebSocket 1
+- **Categories:** 15
 
-### Install in 3 Steps
+Category counts:
 
-1. **Download** — Get the latest `.dmg` from the [Releases page](https://github.com/yeogirlyun/ClawPad-Release/releases/latest)
-2. **Install** — Open the DMG and drag ClawPad to your Applications folder
-3. **Launch** — Open ClawPad from Applications. It will automatically set up OpenClaw Gateway on first launch.
+| Category | Endpoints |
+|---|---:|
+| Health & Status | 5 |
+| Developer Docs & Discovery | 11 |
+| Gateway & Connection | 39 |
+| Projects | 7 |
+| Messages & AI | 7 |
+| Files & Artifacts | 6 |
+| Search | 4 |
+| Settings & Config | 16 |
+| Themes & Appearance | 2 |
+| AI Models | 1 |
+| System & Database | 4 |
+| UI Control | 17 |
+| Screenshots | 8 |
+| Extensions & Tools | 15 |
+| WebSocket | 1 |
 
-That's it. No terminal commands, no Docker, no manual configuration.
-
----
-
-## Download
-
-📥 **[Download ClawPad (macOS)](https://github.com/yeogirlyun/ClawPad-Release/releases/latest)**
-
----
-
-## Links
-
-- 🌐 **Website:** [www.clawpad.ai](https://www.clawpad.ai)
-- 📧 **Support:** support@clawpad.ai
-- 🐛 **Issues:** [GitHub Issues](https://github.com/yeogirlyun/ClawPad-Release/issues)
-
----
-
-*ClawPad is a proprietary application. This repository is for releases only.*
-
-*Copyright 2024-2026 ClawPad. All rights reserved.*
+This means core platform capabilities are not just UI-only; they are exposed and documented for automation and integration.
 
 ---
 
 ## API Docs Bundle (Shipped With Every Binary)
 
-Each published release ships with a version-matched API docs zip asset.
+Each release includes a version-matched API docs zip asset.
 
-- Location in this repo: `api-docs/current/`
-- Release asset name: `clawpad-api-docs-<release-tag>.zip`
-- Contents:
-  - Human guides (`docs/`)
-  - Comprehensive endpoint reference (`docs/REMOTE_API_REFERENCE_COMPLETE.md`)
-  - Machine-readable endpoint payloads (`reference/*.json`)
+- In-repo source: `api-docs/current/`
+- Release asset: `clawpad-api-docs-<release-tag>.zip`
+- Manifest: `api-docs/manifest.json`
 
-Developers can review docs directly on GitHub and download the same docs package bundled with binaries.
-
-Production-grade docs entry points:
+Primary docs entry points:
 
 - [Quickstart](./api-docs/current/docs/QUICKSTART.md)
-- [Stealth Server Production Guide](./api-docs/current/docs/STEALTH_SERVER_PRODUCTION_GUIDE.md)
+- [Remote API Developer Platform Guide](./api-docs/current/docs/REMOTE_API_DEVELOPER_PLATFORM_GUIDE.md)
+- [Complete Endpoint Reference](./api-docs/current/docs/REMOTE_API_REFERENCE_COMPLETE.md)
 - [API Auth Signing Spec](./api-docs/current/docs/API_AUTH_SIGNING_SPEC.md)
+- [Stealth Server Production Guide](./api-docs/current/docs/STEALTH_SERVER_PRODUCTION_GUIDE.md)
 - [Errors, Retries, and Failure Policy](./api-docs/current/docs/ERRORS_RETRIES_AND_FAILURE_POLICY.md)
 - [SDK Blueprint](./api-docs/current/docs/SDK_BLUEPRINT.md)
 - [Integration Checklist](./api-docs/current/docs/INTEGRATION_CHECKLIST.md)
-- [Complete Endpoint Reference](./api-docs/current/docs/REMOTE_API_REFERENCE_COMPLETE.md)
+
+Companion docs repository:
+
+- [github.com/yeogirlyun/clawpad-api-docs](https://github.com/yeogirlyun/clawpad-api-docs)
+
+---
+
+## Installation
+
+1. Download latest DMG from [Releases](https://github.com/yeogirlyun/ClawPad-Release/releases/latest)
+2. Drag ClawPad into Applications
+3. Launch ClawPad
+
+---
+
+## Links
+
+- Product: [clawpad.ai](https://www.clawpad.ai)
+- Releases: [github.com/yeogirlyun/ClawPad-Release/releases](https://github.com/yeogirlyun/ClawPad-Release/releases)
+- API Docs: [github.com/yeogirlyun/clawpad-api-docs](https://github.com/yeogirlyun/clawpad-api-docs)
+- Support: `support@clawpad.ai`
+
+---
+
+*ClawPad is proprietary software. This repository distributes official release artifacts and associated documentation.*
