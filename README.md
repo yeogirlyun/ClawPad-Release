@@ -137,7 +137,7 @@ This means core platform capabilities are not just UI-only; they are exposed and
 Each release includes a version-matched API docs zip asset.
 
 - In-repo source: `api-docs/current/`
-- Release asset: `clawpad-api-docs-<release-tag>.zip`
+- Release asset: version-matched API docs zip (attached in Releases)
 - Manifest: `api-docs/manifest.json`
 
 Primary docs entry points:
@@ -150,10 +150,6 @@ Primary docs entry points:
 - [Errors, Retries, and Failure Policy](./api-docs/current/docs/ERRORS_RETRIES_AND_FAILURE_POLICY.md)
 - [SDK Blueprint](./api-docs/current/docs/SDK_BLUEPRINT.md)
 - [Integration Checklist](./api-docs/current/docs/INTEGRATION_CHECKLIST.md)
-
-Companion docs repository:
-
-- [github.com/yeogirlyun/clawpad-api-docs](https://github.com/yeogirlyun/clawpad-api-docs)
 
 ---
 
@@ -169,7 +165,7 @@ Companion docs repository:
 
 - Product: [clawpad.ai](https://www.clawpad.ai)
 - Releases: [github.com/yeogirlyun/ClawPad-Release/releases](https://github.com/yeogirlyun/ClawPad-Release/releases)
-- API Docs: [github.com/yeogirlyun/clawpad-api-docs](https://github.com/yeogirlyun/clawpad-api-docs)
+- API Docs (in this repo): [api-docs/current](./api-docs/current/)
 - Support: `support@clawpad.ai`
 
 ---

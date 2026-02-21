@@ -111,7 +111,7 @@ For each release:
 
 Every binary release must include:
 
-- `clawpad-api-docs-<tag>.zip` asset
+- version-matched API docs zip asset
 - The same `api-docs/current` content checked into release hub
 
 This keeps runtime artifacts and documentation contract-aligned.

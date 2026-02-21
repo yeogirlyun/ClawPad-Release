@@ -73,7 +73,7 @@ Map server responses into typed SDK errors:
 
 For each ClawPad release tag:
 
-1. Pull matching `clawpad-api-docs-<tag>.zip`.
+1. Pull the matching API docs zip for the release tag.
 2. Diff endpoint inventory (`reference/endpoints.json`).
 3. Run SDK compatibility test suite.
 4. Publish SDK changelog entry with contract notes.

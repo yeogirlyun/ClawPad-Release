@@ -42,6 +42,6 @@ Version: 1.0
 ## 6. Release Operations
 
 - [ ] Binary release uploaded.
-- [ ] Matching `clawpad-api-docs-<tag>.zip` attached.
+- [ ] Matching API docs zip asset attached.
 - [ ] Team validated docs version against runtime tag.
 - [ ] Integration regression suite completed.

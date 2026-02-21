@@ -18,7 +18,7 @@ This directory contains the API documentation payload that is shipped with binar
 
 ## Release Shipping Rule
 
-Every published binary release must include a matching `clawpad-api-docs-<tag>.zip` asset.
+Every published binary release must include a matching API docs zip asset.
 
 A GitHub Actions workflow in `.github/workflows/release-attach-api-docs.yml` automatically builds
 and uploads this zip from `api-docs/current` whenever a release is published.
