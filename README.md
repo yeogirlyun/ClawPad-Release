@@ -9,6 +9,10 @@
 </p>
 
 <p align="center">
+  <strong>License:</strong> Free for personal, business, and commercial use. Remote API is included and free.
+</p>
+
+<p align="center">
   <a href="https://github.com/yeogirlyun/ClawPad-Release/releases/latest">
     <img src="https://img.shields.io/github/v/release/yeogirlyun/ClawPad-Release?style=for-the-badge&color=7c3aed" alt="Latest Release">
   </a>
@@ -50,7 +54,7 @@ ClawPad is a native PyQt6 desktop AI workspace with a **local-first architecture
 
 ## Core Technical Achievements
 
-These are the headline capabilities aligned with current architecture and requirements (`v0.5.2`):
+These are the headline capabilities aligned with current architecture and requirements (`v0.6.x`):
 
 1. **Local-first AI runtime (no-key start)**
    - Embedded local model workflow enabled by default
@@ -61,8 +65,9 @@ These are the headline capabilities aligned with current architecture and requir
    - Message/runtime telemetry supports reliability and optimization analysis
 
 3. **Production Remote API platform**
-   - **143 documented endpoints** + WebSocket stream
-   - **15 categories**, including UI automation and extension/tool control
+   - **161 documented endpoints** + WebSocket stream
+   - **Webhook ingress + developer dashboard** included
+   - **15+ categories**, including UI automation and extension/tool control
 
 4. **Signed API security model**
    - `/api/*` is authenticated by default
@@ -79,7 +84,15 @@ These are the headline capabilities aligned with current architecture and requir
 7. **Multi-instance runtime leadership controls**
    - API/bot/gateway ownership safety with fingerprint-aware lifecycle behavior
 
-8. **Release integrity workflow**
+8. **Proactive engine + jobs dashboard**
+   - Event-driven proactive architecture with durable jobs timeline
+   - Dashboard + API workflow for create/update/filter/select
+
+9. **Dual OpenClaw mode compatibility**
+   - Embedded OpenClaw mode (full ClawPad feature path)
+   - Original OpenClaw mode (workspace + external gateway path)
+
+10. **Release integrity workflow**
    - RRA gate + release preflight + signed/notarized distribution + matched docs bundle
 
 ---
@@ -104,9 +117,9 @@ For product deep dive and visuals:
 
 Current API snapshot (`api-docs/current/reference/endpoint-summary.json`):
 
-- **Total:** 143
-- **Methods:** GET 66, POST 63, PUT 5, DELETE 8, WebSocket 1
-- **Categories:** 15
+- **Total:** 161
+- **Methods:** GET, POST, PUT, PATCH, DELETE, WebSocket
+- **Categories:** 15+
 
 Category counts:
 
@@ -161,12 +174,19 @@ Primary docs entry points:
 
 ---
 
+## License and Usage
+
+- Free for personal, business, and commercial use.
+- Remote API usage is included and free.
+
+---
+
 ## Links
 
 - Product: [clawpad.ai](https://www.clawpad.ai)
 - Releases: [github.com/yeogirlyun/ClawPad-Release/releases](https://github.com/yeogirlyun/ClawPad-Release/releases)
 - API Docs (in this repo): [api-docs/current](./api-docs/current/)
-- Support: `support@clawpad.ai`
+- Feedback / Questions / Inquiries: [ClawPad YouTube Community](https://www.youtube.com/@clawpad-ai/community)
 
 ---
 
