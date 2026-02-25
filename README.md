@@ -71,7 +71,7 @@ For product walkthroughs and downloads:
 
 ---
 
-## Technology Footprint (Capability-Level)
+## Technology Footprint
 
 - **Desktop platform:** Python + PyQt6 native application runtime
 - **Local AI capability:** local-first runtime with GGUF-class model support
