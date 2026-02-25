@@ -71,6 +71,18 @@ For product walkthroughs and downloads:
 
 ---
 
+## Technology Footprint (Capability-Level)
+
+- **Desktop platform:** Python + PyQt6 native application runtime
+- **Local AI capability:** local-first runtime with GGUF-class model support
+- **API protocols:** REST/JSON endpoints, WebSocket event stream, webhook ingress
+- **Extension standard:** MCP-based extension ecosystem
+- **Data/search substrate:** SQLite persistence with FTS-backed retrieval
+- **Security posture:** authenticated API surface and encrypted credential storage capabilities
+- **Distribution trust:** Apple Developer ID signing, notarization, and checksum verification
+
+---
+
 ## Product Features
 
 - **Agent Jobs** as a first-class automation surface with timeline-backed operational visibility
