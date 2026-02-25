@@ -5,7 +5,7 @@
 <h1 align="center">ClawPad</h1>
 
 <p align="center">
-  <strong>Local-First Native AI Workspace + Production Remote API Platform</strong>
+  <strong>Local-First AI Workspace + Production Remote API Platform</strong>
 </p>
 
 <p align="center">
@@ -14,7 +14,7 @@
 
 <p align="center">
   <a href="https://github.com/yeogirlyun/ClawPad-Release/releases/latest">
-    <img src="https://img.shields.io/github/v/release/yeogirlyun/ClawPad-Release?style=for-the-badge&color=7c3aed" alt="Latest Release">
+    <img src="https://img.shields.io/github/v/release/yeogirlyun/ClawPad-Release?style=for-the-badge&color=0ea5e9" alt="Latest Release">
   </a>
   <a href="https://www.clawpad.ai">
     <img src="https://img.shields.io/badge/Product-clawpad.ai-blue?style=for-the-badge" alt="Website">
@@ -26,142 +26,72 @@
 
 ---
 
-## What This Repository Is
+## What This Repository Provides
 
-This is the **official release repository** for ClawPad binaries and release assets.
+This is the official distribution and release-note repository for ClawPad.
 
-- Download DMG builds
-- Read release notes
-- Access version-matched API docs bundles
+- signed/notarized release artifacts
+- versioned release summaries
+- version-matched API docs bundle
 
-For full product details, architecture, and user-facing workflows:
-
+For product walkthroughs and downloads:
 - [clawpad.ai](https://www.clawpad.ai)
-
----
-
-## ClawPad at a Glance
-
-ClawPad is a native PyQt6 desktop AI workspace with a **local-first architecture**.
-
-- Default AI path is on-device (`local_openai`, `qwen3-4b-q4`) so users can start without cloud keys
-- Hybrid routing supports local + cloud decisions with explicit confidence/gate traces
-- Topic-based workspaces keep files, history, context, and model settings isolated
-- Embedded OpenClaw runtime powers channels, tools, and automation
-- Remote API is first-class: automation, UI control, screenshots, extensions, settings, and direct-link workflows
 
 ---
 
 ## Core Technical Achievements
 
-These are the headline capabilities aligned with current architecture and requirements (`v0.6.x`):
+1. **Secure Pairing + Direct Client/Server Execution**
+   - secure ticket-based remote enrollment
+   - direct runtime connectivity for client/server operations
 
-1. **Local-first AI runtime (no-key start)**
-   - Embedded local model workflow enabled by default
-   - Cloud keys become optional, not mandatory
+2. **Remote Server Lifecycle + Compatibility Contract**
+   - lifecycle management surfaces for remote execution environments
+   - compatibility contract for stable cross-version operation
 
-2. **Deterministic hybrid routing with observability**
-   - Local/cloud decisions include confidence + gate trace metadata
-   - Message/runtime telemetry supports reliability and optimization analysis
+3. **MCP Extension Operations + Reliability Controls**
+   - full extension lifecycle capabilities: catalog, install, configure, start, stop, update
+   - explicit operational health and failure visibility for extension/runtime safety
 
-3. **Production Remote API platform**
-   - **161 documented endpoints** + WebSocket stream
-   - **Webhook ingress + developer dashboard** included
-   - **15+ categories**, including UI automation and extension/tool control
+4. **Multi-Instance Runtime Leadership Controls**
+   - ownership safety across API, bot, and gateway surfaces
+   - predictable leadership behavior for concurrent runtime instances
 
-4. **Signed API security model**
-   - `/api/*` is authenticated by default
-   - Client enrollment + request signing headers documented in API auth spec
+5. **Proactive Engine + Agent Jobs Control Plane**
+   - durable jobs timeline with run-aware visibility
+   - dashboard + API management for create, update, filter, select, and execute flows
 
-5. **Direct TLS remote mode (no hub relay dependency)**
-   - Secure ticket-based pairing and direct client/server execution mode
-   - Remote-server lifecycle and compatibility RPCs documented
+6. **Dual OpenClaw Mode Compatibility**
+   - embedded OpenClaw mode for full ClawPad feature path
+   - original OpenClaw mode for workspace + external gateway path
 
-6. **MCP extension operations + reliability controls**
-   - Catalog/install/start/stop/env/update APIs
-   - Health probing, explicit failure contracts, and reliability metric surfaces
-
-7. **Multi-instance runtime leadership controls**
-   - API/bot/gateway ownership safety with fingerprint-aware lifecycle behavior
-
-8. **Proactive engine + jobs dashboard**
-   - Event-driven proactive architecture with durable jobs timeline
-   - Dashboard + API workflow for create/update/filter/select
-
-9. **Dual OpenClaw mode compatibility**
-   - Embedded OpenClaw mode (full ClawPad feature path)
-   - Original OpenClaw mode (workspace + external gateway path)
-
-10. **Release integrity workflow**
-   - RRA gate + release preflight + signed/notarized distribution + matched docs bundle
+7. **Release Integrity Workflow**
+   - RRA gate and release preflight validation
+   - signed/notarized artifacts with synchronized release/docs bundle
 
 ---
 
 ## Product Features
 
-- Topic-centric AI workspace (Telegram-style navigation, chat continuity)
-- Per-topic model and routing controls
-- File ingestion, search, and artifact management
-- Channel-connected workflows (desktop + messaging channels)
-- Extension ecosystem via MCP
-- Theme system and native desktop UX
-- Built-in API Explorer for live endpoint execution/testing
-
-For product deep dive and visuals:
-
-- [clawpad.ai](https://www.clawpad.ai)
+- **Agent Jobs** as a first-class automation surface with timeline-backed operational visibility
+- **Remote API platform** for application control, automation, extension operations, and observability
+- **MCP extension ecosystem** with production-oriented lifecycle and reliability visibility
+- **Workspace continuity** across desktop and channel-connected usage paths
+- **Dual-mode OpenClaw interoperability** for embedded and external-gateway operating models
+- **Release-grade distribution quality** for production rollouts and update integrity
 
 ---
 
-## API Coverage (Documented)
+## API Docs Bundle (Shipped With Releases)
 
-Current API snapshot (`api-docs/current/reference/endpoint-summary.json`):
+Each release includes a version-matched API docs bundle.
 
-- **Total:** 161
-- **Methods:** GET, POST, PUT, PATCH, DELETE, WebSocket
-- **Categories:** 15+
-
-Category counts:
-
-| Category | Endpoints |
-|---|---:|
-| Health & Status | 5 |
-| Developer Docs & Discovery | 11 |
-| Gateway & Connection | 39 |
-| Projects | 7 |
-| Messages & AI | 7 |
-| Files & Artifacts | 6 |
-| Search | 4 |
-| Settings & Config | 16 |
-| Themes & Appearance | 2 |
-| AI Models | 1 |
-| System & Database | 4 |
-| UI Control | 17 |
-| Screenshots | 8 |
-| Extensions & Tools | 15 |
-| WebSocket | 1 |
-
-This means core platform capabilities are not just UI-only; they are exposed and documented for automation and integration.
-
----
-
-## API Docs Bundle (Shipped With Every Binary)
-
-Each release includes a version-matched API docs zip asset.
-
-- In-repo source: `api-docs/current/`
-- Release asset: version-matched API docs zip (attached in Releases)
-- Manifest: `api-docs/manifest.json`
-
-Primary docs entry points:
-
+Primary entry points:
 - [Quickstart](./api-docs/current/docs/QUICKSTART.md)
 - [Remote API Developer Platform Guide](./api-docs/current/docs/REMOTE_API_DEVELOPER_PLATFORM_GUIDE.md)
 - [Complete Endpoint Reference](./api-docs/current/docs/REMOTE_API_REFERENCE_COMPLETE.md)
 - [API Auth Signing Spec](./api-docs/current/docs/API_AUTH_SIGNING_SPEC.md)
-- [Stealth Server Production Guide](./api-docs/current/docs/STEALTH_SERVER_PRODUCTION_GUIDE.md)
 - [Errors, Retries, and Failure Policy](./api-docs/current/docs/ERRORS_RETRIES_AND_FAILURE_POLICY.md)
-- [SDK Blueprint](./api-docs/current/docs/SDK_BLUEPRINT.md)
 - [Integration Checklist](./api-docs/current/docs/INTEGRATION_CHECKLIST.md)
 
 ---
