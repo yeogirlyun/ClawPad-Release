@@ -19,6 +19,9 @@
   <a href="https://www.clawpad.ai">
     <img src="https://img.shields.io/badge/Product-clawpad.ai-blue?style=for-the-badge" alt="Website">
   </a>
+  <a href="https://www.clawpad.ai/api/">
+    <img src="https://img.shields.io/badge/API_Portal-Developer_Docs-green?style=for-the-badge" alt="API Portal">
+  </a>
   <a href="https://github.com/yeogirlyun/ClawPad-Release/releases/latest">
     <img src="https://img.shields.io/badge/Platform-macOS-lightgrey?style=for-the-badge&logo=apple" alt="macOS">
   </a>
@@ -30,112 +33,111 @@
 
 This is the official distribution and release-note repository for ClawPad.
 
-- signed/notarized release artifacts
+- signed and notarized macOS release artifacts
 - versioned release summaries
-- version-matched API docs bundle
+- version-matched API documentation bundle
 
-For product walkthroughs and downloads:
-- [clawpad.ai](https://www.clawpad.ai)
+For product walkthroughs and downloads: [clawpad.ai](https://www.clawpad.ai)
 
 ---
 
 ## Velvet Lattice Architecture
 
-ClawPad is built on the **Velvet Lattice** architecture — a vertically integrated platform where every layer (model routing, app runtime, UI rendering, data persistence, and API surface) is woven together into a single coherent system.
+ClawPad is built on the **Velvet Lattice** — a vertically integrated architecture where model intelligence, app runtime, interface rendering, data persistence, and API surface are woven into a single coherent platform.
 
-This architecture enables capabilities that are difficult or impossible with loosely coupled tools:
+What this makes possible:
 
-- **Automatic app evolution** — apps continuously gain new features, UI refinements, and competitive parity improvements through platform-level manufacturing processes. An app that ships with 15 operations today can grow to 45+ without manual intervention.
-- **Intelligent model routing** — the platform monitors provider health in real time and automatically cascades through the best available model ranked by intelligence-per-dollar. If a provider goes down, your workflow continues seamlessly.
-- **Domain-aware UI generation** — each app receives a UI specialized for its domain (data tables for spreadsheets, message streams for chat, canvas layouts for drawing) rather than a generic one-size-fits-all interface.
-- **Self-healing release pipeline** — 1,758 automated tests validate every release with zero human interaction. Build, sign, notarize, and distribute in a single pipeline.
+- **Natural language to problem-solving apps at scale** — describe what you need, and the platform produces working applications with real backends, specialized UIs, and full API access.
+- **Automatic app evolution** — apps continuously gain new features and competitive parity improvements through platform-level processes. An app that ships with basic capabilities today grows to match market leaders without manual intervention.
+- **Massive-scale UI improvement** — every app receives a domain-specialized interface (data tables for finance, message streams for communication, canvas layouts for creative tools) generated and refined at platform scale rather than hand-built one at a time.
+- **Intelligent model management** — the platform monitors AI provider health in real time and automatically routes through the best available model. If a provider goes down, your workflow continues on the next best option without interruption.
+- **Self-verifying releases** — thousands of automated tests validate every release end-to-end with zero human interaction, ensuring production quality across the entire app ecosystem.
 
-The result: a platform where **123 apps** ship as a single integrated product, each with a REST API, web UI, and full AI operability — and the platform keeps improving all of them simultaneously.
+The result: **123 apps** ship as a single integrated product — each with a REST API, web UI, and full AI operability — and the platform keeps improving all of them simultaneously.
 
 ---
 
 ## Core Capabilities
 
-1. **123-App Ecosystem**
-   - 95 user-facing apps spanning productivity, finance, creative, developer tools, and more
-   - every app has a REST API, browser-based UI, and AI-operable interface
-   - apps are continuously expanded toward competitive feature parity with market leaders
+### 123-App Ecosystem
+95 user-facing apps spanning productivity, finance, creative, developer tools, health, education, and more. Every app has a REST API, a browser-based UI, and an AI-operable interface. Apps are continuously expanded toward competitive feature parity with market leaders.
 
-2. **Intelligent Model Routing + Automatic Fallback**
-   - single source of truth for active model resolution across cloud and local providers
-   - real-time provider health monitoring with automatic recovery
-   - fallback cascade: cloud models → alternative providers → local models → graceful degradation
+### Intelligent Model Routing
+Seamless AI model management across cloud and local providers. Real-time health monitoring with automatic recovery. If one provider goes down, the platform cascades through alternatives — cloud, other providers, local models — with zero user intervention.
 
-3. **Massive-Scale UI Improvement**
-   - platform-level UI generation produces domain-specialized interfaces for every app
-   - 8 layout archetypes matched to app domains (tables, grids, dashboards, canvases, timelines, message streams)
-   - UI improvements propagate across all apps in a single pass
+### Platform-Scale Manufacturing
+The platform can analyze competitive landscapes, identify feature gaps, design new capabilities, and implement them across dozens of apps in a single pass. This is how 30+ apps grew from minimal feature sets to 84-86% competitive parity with market leaders.
 
-4. **Continuous Feature Expansion**
-   - automated competitive analysis identifies feature gaps against market leaders
-   - platform manufacturing processes design, implement, and test new operations at scale
-   - 30+ apps already expanded from minimal feature sets to 84-86% competitive parity
+### Domain-Specialized Interfaces
+Each app gets a UI matched to its domain — not a generic template. Eight distinct layout archetypes cover the full range from data-heavy spreadsheets to freeform creative canvases, with domain-specific widgets and interaction patterns.
 
-5. **Secure Pairing + Direct Client/Server Execution**
-   - secure ticket-based remote enrollment
-   - direct runtime connectivity for client/server operations
+### Agent Jobs + Automation
+Durable autonomous workflows with timeline-backed visibility. Create, schedule, monitor, and manage multi-step AI-driven jobs through both the desktop interface and the REST API.
 
-6. **Remote Server Lifecycle + Compatibility Contract**
-   - lifecycle management surfaces for remote execution environments
-   - compatibility contract for stable cross-version operation
+### MCP Extension Ecosystem
+Full extension lifecycle — discover, install, configure, run, monitor, and update. Production-grade health visibility and failure handling for reliable integrations.
 
-7. **MCP Extension Ecosystem**
-   - full extension lifecycle: catalog, install, configure, start, stop, update
-   - operational health and failure visibility for production reliability
+### Remote API Platform
+Complete programmatic control over everything ClawPad does. Application operations, automation, AI orchestration, extension management, and system observability — all through authenticated REST endpoints.
 
-8. **Agent Jobs Control Plane**
-   - durable jobs timeline with run-aware visibility
-   - dashboard + API management for autonomous multi-step workflows
+### Secure Local-First Design
+All data stays on your machine. Encrypted credential storage. Authenticated API surfaces. Apple Developer ID signed and notarized distribution.
+
+---
+
+## API Developer Portal
+
+<p align="center">
+  <a href="https://www.clawpad.ai/api/">
+    <strong>www.clawpad.ai/api</strong>
+  </a>
+</p>
+
+The API portal is the primary resource for developers building on ClawPad. It provides:
+
+- **Interactive endpoint browser** — explore every REST endpoint across all 123 apps with parameter schemas and example requests
+- **Per-app OpenAPI specs** — full machine-readable specifications for each app (JSON format), ready for code generation
+- **Getting started guide** — authentication setup, first API call, and SDK quickstart
+- **Headless mode docs** — run ClawPad without a GUI as a pure API server for automation and CI/CD pipelines
+- **Orchestration guide** — build multi-step AI workflows that chain app operations together
+- **Python SDK reference** — native Python client for all ClawPad APIs
+
+### What you can build with the API
+
+- **Custom dashboards** that pull data from multiple ClawPad apps
+- **Automation pipelines** — trigger app operations from external systems via webhooks
+- **AI agent integrations** — let AI models operate ClawPad apps through the standard REST interface
+- **Headless batch processing** — run ClawPad as a backend service for scheduled tasks
+- **Channel bots** — connect ClawPad capabilities to Telegram, Discord, Slack, LINE, or WhatsApp
+
+### Quick links
+
+| Resource | URL |
+|----------|-----|
+| API Portal Home | [www.clawpad.ai/api](https://www.clawpad.ai/api/) |
+| Getting Started | [www.clawpad.ai/api/getting-started](https://www.clawpad.ai/api/getting-started) |
+| Headless Mode | [www.clawpad.ai/api/headless](https://www.clawpad.ai/api/headless) |
+| Orchestration | [www.clawpad.ai/api/orchestration](https://www.clawpad.ai/api/orchestration) |
+| Python SDK | [www.clawpad.ai/api/sdk](https://www.clawpad.ai/api/sdk) |
+| OpenAPI Specs | [www.clawpad.ai/api/specs](https://www.clawpad.ai/api/) (per-app JSON) |
 
 ---
 
 ## Technology Footprint
 
-- **Desktop platform:** Python + PyQt6 native application runtime
-- **Local AI capability:** local-first runtime with GGUF-class model support
-- **API protocols:** REST/JSON endpoints, WebSocket event stream, webhook ingress
-- **Extension standard:** MCP-based extension ecosystem
-- **Data substrate:** SQLite persistence with FTS-backed retrieval
-- **Security posture:** authenticated API surface with encrypted credential storage
-- **Distribution trust:** Apple Developer ID signing, notarization, and checksum verification
-
----
-
-## Product Features
-
-- **Intelligent Model Routing** with automatic fallback across cloud and local providers
-- **123 bundled apps** with REST APIs, web UIs, and AI operability
-- **Platform-scale UI generation** — domain-specialized interfaces for every app
-- **Continuous feature expansion** — apps grow toward competitive parity automatically
-- **Agent Jobs** as a first-class automation surface with timeline-backed operational visibility
-- **Remote API platform** for application control, automation, and observability
-- **MCP extension ecosystem** with production-oriented lifecycle management
-- **Workspace continuity** across desktop and channel-connected usage paths
-
----
-
-## API Docs Bundle (Shipped With Releases)
-
-Each release includes a version-matched API docs bundle.
-
-Primary entry points:
-- [Quickstart](./api-docs/current/docs/QUICKSTART.md)
-- [Remote API Developer Platform Guide](./api-docs/current/docs/REMOTE_API_DEVELOPER_PLATFORM_GUIDE.md)
-- [Complete Endpoint Reference](./api-docs/current/docs/REMOTE_API_REFERENCE_COMPLETE.md)
-- [API Auth Signing Spec](./api-docs/current/docs/API_AUTH_SIGNING_SPEC.md)
-- [Errors, Retries, and Failure Policy](./api-docs/current/docs/ERRORS_RETRIES_AND_FAILURE_POLICY.md)
-- [Integration Checklist](./api-docs/current/docs/INTEGRATION_CHECKLIST.md)
+- **Desktop:** native macOS application (Apple Silicon + Intel via Rosetta)
+- **Local AI:** local-first runtime with support for open-weight models
+- **API:** REST/JSON endpoints, WebSocket event streams, webhook ingress
+- **Extensions:** MCP-based extension ecosystem
+- **Data:** local SQLite persistence with full-text search
+- **Security:** authenticated API surface, encrypted credential storage
+- **Distribution:** Apple Developer ID signed, notarized, and checksum verified
 
 ---
 
 ## Installation
 
-1. Download latest DMG from [Releases](https://github.com/yeogirlyun/ClawPad-Release/releases/latest)
+1. Download the latest DMG from [Releases](https://github.com/yeogirlyun/ClawPad-Release/releases/latest)
 2. Double-click ClawPad.app to install (self-installs to Applications)
 3. Configure your AI provider and start using
 
@@ -143,18 +145,18 @@ Primary entry points:
 
 ## License and Usage
 
-- Free for personal, business, and commercial use.
-- Remote API usage is included and free.
+Free for personal, business, and commercial use. Remote API usage is included and free.
 
 ---
 
 ## Links
 
 - Product: [clawpad.ai](https://www.clawpad.ai)
+- API Portal: [clawpad.ai/api](https://www.clawpad.ai/api/)
 - Releases: [github.com/yeogirlyun/ClawPad-Release/releases](https://github.com/yeogirlyun/ClawPad-Release/releases)
-- API Docs (in this repo): [api-docs/current](./api-docs/current/)
-- Feedback / Questions / Inquiries: [ClawPad YouTube Community](https://www.youtube.com/@clawpad-ai/community)
+- API Docs (bundled): [api-docs/current](./api-docs/current/)
+- Feedback: [ClawPad YouTube Community](https://www.youtube.com/@clawpad-ai/community)
 
 ---
 
-*ClawPad is proprietary software. This repository distributes official release artifacts and associated documentation.*
+*ClawPad is proprietary software. This repository distributes official release artifacts and documentation.*
