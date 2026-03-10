@@ -41,32 +41,38 @@ For product walkthroughs and downloads:
 
 ## Core Technical Achievements
 
-1. **Secure Pairing + Direct Client/Server Execution**
+1. **Intelligent Model Routing + Automatic Fallback**
+   - ModelRouter as single source of truth for active model resolution
+   - ModelHealthRegistry with 15-minute provider health probes and TTL-based recovery
+   - intelligence-per-dollar ranking for smart fallback cascade (READY → FALLBACK → LOCAL_ONLY)
+
+2. **123-App Ecosystem with Competitive Feature Parity**
+   - 95 user-facing apps, each with REST API, web UI, and AI operability
+   - PDForge manufacturing pipeline: 30+ apps expanded to 40-45 operations at 84-86% competitive parity
+   - domain-specific UI specialization via UIForge profiles across all apps
+
+3. **Secure Pairing + Direct Client/Server Execution**
    - secure ticket-based remote enrollment
    - direct runtime connectivity for client/server operations
 
-2. **Remote Server Lifecycle + Compatibility Contract**
+4. **Remote Server Lifecycle + Compatibility Contract**
    - lifecycle management surfaces for remote execution environments
    - compatibility contract for stable cross-version operation
 
-3. **MCP Extension Operations + Reliability Controls**
+5. **MCP Extension Operations + Reliability Controls**
    - full extension lifecycle capabilities: catalog, install, configure, start, stop, update
    - explicit operational health and failure visibility for extension/runtime safety
 
-4. **Multi-Instance Runtime Leadership Controls**
-   - ownership safety across API, bot, and gateway surfaces
-   - predictable leadership behavior for concurrent runtime instances
-
-5. **Proactive Engine + Agent Jobs Control Plane**
+6. **Proactive Engine + Agent Jobs Control Plane**
    - durable jobs timeline with run-aware visibility
    - dashboard + API management for create, update, filter, select, and execute flows
 
-6. **Dual OpenClaw Mode Compatibility**
-   - embedded OpenClaw mode for full ClawPad feature path
-   - original OpenClaw mode for workspace + external gateway path
+7. **Embedded OpenClaw Gateway**
+   - integrated local gateway for unified AI model access
+   - automatic provider health monitoring and model switching
 
-7. **Release Integrity Workflow**
-   - RRA gate and release preflight validation
+8. **Release Integrity Workflow**
+   - 1,758 automated tests with zero human interaction (RRG auto suite)
    - signed/notarized artifacts with synchronized release/docs bundle
 
 ---
@@ -77,19 +83,21 @@ For product walkthroughs and downloads:
 - **Local AI capability:** local-first runtime with GGUF-class model support
 - **API protocols:** REST/JSON endpoints, WebSocket event stream, webhook ingress
 - **Extension standard:** MCP-based extension ecosystem
-- **Data/search substrate:** SQLite persistence with FTS-backed retrieval
+- **Data/search substrate:** SQLite persistence with FTS-backed retrieval (platform DB + per-app DBs)
 - **Security posture:** authenticated API surface and encrypted credential storage capabilities
 - **Distribution trust:** Apple Developer ID signing, notarization, and checksum verification
+- **App manufacturing:** PDForge pipeline + UIForge specialization for competitive feature parity
 
 ---
 
 ## Product Features
 
+- **Intelligent Model Routing** with automatic fallback across cloud and local providers
+- **123 bundled apps** — productivity, finance, creative, developer tools, and more
 - **Agent Jobs** as a first-class automation surface with timeline-backed operational visibility
 - **Remote API platform** for application control, automation, extension operations, and observability
 - **MCP extension ecosystem** with production-oriented lifecycle and reliability visibility
 - **Workspace continuity** across desktop and channel-connected usage paths
-- **Dual-mode OpenClaw interoperability** for embedded and external-gateway operating models
 - **Release-grade distribution quality** for production rollouts and update integrity
 
 ---
@@ -111,8 +119,8 @@ Primary entry points:
 ## Installation
 
 1. Download latest DMG from [Releases](https://github.com/yeogirlyun/ClawPad-Release/releases/latest)
-2. Drag ClawPad into Applications
-3. Launch ClawPad
+2. Double-click ClawPad.app to install (self-installs to Applications)
+3. Configure your AI provider and start using
 
 ---
 
