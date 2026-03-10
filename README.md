@@ -39,41 +39,58 @@ For product walkthroughs and downloads:
 
 ---
 
-## Core Technical Achievements
+## Velvet Lattice Architecture
 
-1. **Intelligent Model Routing + Automatic Fallback**
-   - ModelRouter as single source of truth for active model resolution
-   - ModelHealthRegistry with 15-minute provider health probes and TTL-based recovery
-   - intelligence-per-dollar ranking for smart fallback cascade (READY → FALLBACK → LOCAL_ONLY)
+ClawPad is built on the **Velvet Lattice** architecture — a vertically integrated platform where every layer (model routing, app runtime, UI rendering, data persistence, and API surface) is woven together into a single coherent system.
 
-2. **123-App Ecosystem with Competitive Feature Parity**
-   - 95 user-facing apps, each with REST API, web UI, and AI operability
-   - PDForge manufacturing pipeline: 30+ apps expanded to 40-45 operations at 84-86% competitive parity
-   - domain-specific UI specialization via UIForge profiles across all apps
+This architecture enables capabilities that are difficult or impossible with loosely coupled tools:
 
-3. **Secure Pairing + Direct Client/Server Execution**
+- **Automatic app evolution** — apps continuously gain new features, UI refinements, and competitive parity improvements through platform-level manufacturing processes. An app that ships with 15 operations today can grow to 45+ without manual intervention.
+- **Intelligent model routing** — the platform monitors provider health in real time and automatically cascades through the best available model ranked by intelligence-per-dollar. If a provider goes down, your workflow continues seamlessly.
+- **Domain-aware UI generation** — each app receives a UI specialized for its domain (data tables for spreadsheets, message streams for chat, canvas layouts for drawing) rather than a generic one-size-fits-all interface.
+- **Self-healing release pipeline** — 1,758 automated tests validate every release with zero human interaction. Build, sign, notarize, and distribute in a single pipeline.
+
+The result: a platform where **123 apps** ship as a single integrated product, each with a REST API, web UI, and full AI operability — and the platform keeps improving all of them simultaneously.
+
+---
+
+## Core Capabilities
+
+1. **123-App Ecosystem**
+   - 95 user-facing apps spanning productivity, finance, creative, developer tools, and more
+   - every app has a REST API, browser-based UI, and AI-operable interface
+   - apps are continuously expanded toward competitive feature parity with market leaders
+
+2. **Intelligent Model Routing + Automatic Fallback**
+   - single source of truth for active model resolution across cloud and local providers
+   - real-time provider health monitoring with automatic recovery
+   - fallback cascade: cloud models → alternative providers → local models → graceful degradation
+
+3. **Massive-Scale UI Improvement**
+   - platform-level UI generation produces domain-specialized interfaces for every app
+   - 8 layout archetypes matched to app domains (tables, grids, dashboards, canvases, timelines, message streams)
+   - UI improvements propagate across all apps in a single pass
+
+4. **Continuous Feature Expansion**
+   - automated competitive analysis identifies feature gaps against market leaders
+   - platform manufacturing processes design, implement, and test new operations at scale
+   - 30+ apps already expanded from minimal feature sets to 84-86% competitive parity
+
+5. **Secure Pairing + Direct Client/Server Execution**
    - secure ticket-based remote enrollment
    - direct runtime connectivity for client/server operations
 
-4. **Remote Server Lifecycle + Compatibility Contract**
+6. **Remote Server Lifecycle + Compatibility Contract**
    - lifecycle management surfaces for remote execution environments
    - compatibility contract for stable cross-version operation
 
-5. **MCP Extension Operations + Reliability Controls**
-   - full extension lifecycle capabilities: catalog, install, configure, start, stop, update
-   - explicit operational health and failure visibility for extension/runtime safety
+7. **MCP Extension Ecosystem**
+   - full extension lifecycle: catalog, install, configure, start, stop, update
+   - operational health and failure visibility for production reliability
 
-6. **Proactive Engine + Agent Jobs Control Plane**
+8. **Agent Jobs Control Plane**
    - durable jobs timeline with run-aware visibility
-   - dashboard + API management for create, update, filter, select, and execute flows
-
-7. **Embedded OpenClaw Gateway**
-   - integrated local gateway for unified AI model access
-   - automatic provider health monitoring and model switching
-
-8. **Release Integrity Workflow**
-   - 1,758 automated tests with zero human interaction (RRG auto suite)
-   - signed/notarized artifacts with synchronized release/docs bundle
+   - dashboard + API management for autonomous multi-step workflows
 
 ---
 
@@ -83,22 +100,22 @@ For product walkthroughs and downloads:
 - **Local AI capability:** local-first runtime with GGUF-class model support
 - **API protocols:** REST/JSON endpoints, WebSocket event stream, webhook ingress
 - **Extension standard:** MCP-based extension ecosystem
-- **Data/search substrate:** SQLite persistence with FTS-backed retrieval (platform DB + per-app DBs)
-- **Security posture:** authenticated API surface and encrypted credential storage capabilities
+- **Data substrate:** SQLite persistence with FTS-backed retrieval
+- **Security posture:** authenticated API surface with encrypted credential storage
 - **Distribution trust:** Apple Developer ID signing, notarization, and checksum verification
-- **App manufacturing:** PDForge pipeline + UIForge specialization for competitive feature parity
 
 ---
 
 ## Product Features
 
 - **Intelligent Model Routing** with automatic fallback across cloud and local providers
-- **123 bundled apps** — productivity, finance, creative, developer tools, and more
+- **123 bundled apps** with REST APIs, web UIs, and AI operability
+- **Platform-scale UI generation** — domain-specialized interfaces for every app
+- **Continuous feature expansion** — apps grow toward competitive parity automatically
 - **Agent Jobs** as a first-class automation surface with timeline-backed operational visibility
-- **Remote API platform** for application control, automation, extension operations, and observability
-- **MCP extension ecosystem** with production-oriented lifecycle and reliability visibility
+- **Remote API platform** for application control, automation, and observability
+- **MCP extension ecosystem** with production-oriented lifecycle management
 - **Workspace continuity** across desktop and channel-connected usage paths
-- **Release-grade distribution quality** for production rollouts and update integrity
 
 ---
 
