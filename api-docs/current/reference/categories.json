@@ -1,19 +1,548 @@
 {
   "categories": [
-    "Health & Status",
-    "Developer Docs & Discovery",
-    "Projects",
-    "Messages & AI",
-    "Files & Artifacts",
-    "Search",
-    "Settings & Config",
-    "Themes & Appearance",
-    "AI Models",
-    "Gateway & Connection",
-    "System & Database",
-    "UI Control",
-    "Screenshots",
-    "Extensions & Tools",
-    "WebSocket"
+    {
+      "name": "remote-api",
+      "count": 241
+    },
+    {
+      "name": "ledger",
+      "count": 57
+    },
+    {
+      "name": "cpws",
+      "count": 55
+    },
+    {
+      "name": "prism",
+      "count": 51
+    },
+    {
+      "name": "clock",
+      "count": 49
+    },
+    {
+      "name": "feed",
+      "count": 49
+    },
+    {
+      "name": "insight",
+      "count": 49
+    },
+    {
+      "name": "ink",
+      "count": 48
+    },
+    {
+      "name": "recipe",
+      "count": 48
+    },
+    {
+      "name": "script",
+      "count": 47
+    },
+    {
+      "name": "lingo",
+      "count": 46
+    },
+    {
+      "name": "memo",
+      "count": 46
+    },
+    {
+      "name": "mint",
+      "count": 46
+    },
+    {
+      "name": "shelf",
+      "count": 46
+    },
+    {
+      "name": "sketch",
+      "count": 46
+    },
+    {
+      "name": "social",
+      "count": 46
+    },
+    {
+      "name": "splice",
+      "count": 46
+    },
+    {
+      "name": "stock",
+      "count": 46
+    },
+    {
+      "name": "studio",
+      "count": 46
+    },
+    {
+      "name": "trade",
+      "count": 46
+    },
+    {
+      "name": "trip",
+      "count": 46
+    },
+    {
+      "name": "vita",
+      "count": 46
+    },
+    {
+      "name": "harvest",
+      "count": 45
+    },
+    {
+      "name": "beacon",
+      "count": 44
+    },
+    {
+      "name": "deal",
+      "count": 44
+    },
+    {
+      "name": "signal",
+      "count": 44
+    },
+    {
+      "name": "wave",
+      "count": 44
+    },
+    {
+      "name": "vault",
+      "count": 43
+    },
+    {
+      "name": "habit",
+      "count": 42
+    },
+    {
+      "name": "reel",
+      "count": 42
+    },
+    {
+      "name": "tube",
+      "count": 42
+    },
+    {
+      "name": "board",
+      "count": 41
+    },
+    {
+      "name": "chart",
+      "count": 41
+    },
+    {
+      "name": "clip",
+      "count": 41
+    },
+    {
+      "name": "cal",
+      "count": 40
+    },
+    {
+      "name": "draft",
+      "count": 39
+    },
+    {
+      "name": "caption",
+      "count": 37
+    },
+    {
+      "name": "flashcard",
+      "count": 37
+    },
+    {
+      "name": "thumb",
+      "count": 37
+    },
+    {
+      "name": "bookmark",
+      "count": 36
+    },
+    {
+      "name": "folio",
+      "count": 36
+    },
+    {
+      "name": "nexus",
+      "count": 36
+    },
+    {
+      "name": "seal",
+      "count": 36
+    },
+    {
+      "name": "hydrate",
+      "count": 35
+    },
+    {
+      "name": "pdforge",
+      "count": 34
+    },
+    {
+      "name": "sleeplog",
+      "count": 34
+    },
+    {
+      "name": "units",
+      "count": 34
+    },
+    {
+      "name": "base",
+      "count": 33
+    },
+    {
+      "name": "brief",
+      "count": 33
+    },
+    {
+      "name": "people",
+      "count": 33
+    },
+    {
+      "name": "pulse",
+      "count": 33
+    },
+    {
+      "name": "tile",
+      "count": 33
+    },
+    {
+      "name": "lens",
+      "count": 32
+    },
+    {
+      "name": "podcast",
+      "count": 32
+    },
+    {
+      "name": "streak",
+      "count": 32
+    },
+    {
+      "name": "scale",
+      "count": 31
+    },
+    {
+      "name": "score",
+      "count": 31
+    },
+    {
+      "name": "standup",
+      "count": 31
+    },
+    {
+      "name": "stream",
+      "count": 31
+    },
+    {
+      "name": "tempo",
+      "count": 31
+    },
+    {
+      "name": "typeset",
+      "count": 31
+    },
+    {
+      "name": "canvas",
+      "count": 30
+    },
+    {
+      "name": "coach",
+      "count": 30
+    },
+    {
+      "name": "landlord",
+      "count": 30
+    },
+    {
+      "name": "pact",
+      "count": 30
+    },
+    {
+      "name": "paint",
+      "count": 30
+    },
+    {
+      "name": "pet",
+      "count": 30
+    },
+    {
+      "name": "record",
+      "count": 30
+    },
+    {
+      "name": "tipcalc",
+      "count": 30
+    },
+    {
+      "name": "cellar",
+      "count": 29
+    },
+    {
+      "name": "course",
+      "count": 29
+    },
+    {
+      "name": "fitness",
+      "count": 29
+    },
+    {
+      "name": "fontview",
+      "count": 29
+    },
+    {
+      "name": "retro",
+      "count": 29
+    },
+    {
+      "name": "shorturl",
+      "count": 29
+    },
+    {
+      "name": "cite",
+      "count": 28
+    },
+    {
+      "name": "lorem",
+      "count": 28
+    },
+    {
+      "name": "recruit",
+      "count": 28
+    },
+    {
+      "name": "budget",
+      "count": 27
+    },
+    {
+      "name": "form",
+      "count": 27
+    },
+    {
+      "name": "journal",
+      "count": 27
+    },
+    {
+      "name": "menu",
+      "count": 27
+    },
+    {
+      "name": "convert",
+      "count": 26
+    },
+    {
+      "name": "garden",
+      "count": 26
+    },
+    {
+      "name": "mind",
+      "count": 26
+    },
+    {
+      "name": "resume",
+      "count": 26
+    },
+    {
+      "name": "snap",
+      "count": 26
+    },
+    {
+      "name": "teach",
+      "count": 26
+    },
+    {
+      "name": "uiforge",
+      "count": 26
+    },
+    {
+      "name": "campaign",
+      "count": 25
+    },
+    {
+      "name": "dash",
+      "count": 25
+    },
+    {
+      "name": "diagram",
+      "count": 25
+    },
+    {
+      "name": "inbox",
+      "count": 25
+    },
+    {
+      "name": "library",
+      "count": 25
+    },
+    {
+      "name": "mood",
+      "count": 25
+    },
+    {
+      "name": "palette",
+      "count": 25
+    },
+    {
+      "name": "plume",
+      "count": 25
+    },
+    {
+      "name": "scan",
+      "count": 25
+    },
+    {
+      "name": "buglist",
+      "count": 24
+    },
+    {
+      "name": "grocery",
+      "count": 24
+    },
+    {
+      "name": "site",
+      "count": 24
+    },
+    {
+      "name": "stopwatch",
+      "count": 24
+    },
+    {
+      "name": "keygen",
+      "count": 23
+    },
+    {
+      "name": "pdf_forge",
+      "count": 22
+    },
+    {
+      "name": "pdf_review",
+      "count": 22
+    },
+    {
+      "name": "pomodoro",
+      "count": 22
+    },
+    {
+      "name": "radar",
+      "count": 22
+    },
+    {
+      "name": "scribe",
+      "count": 22
+    },
+    {
+      "name": "video_demo_diagram_editor",
+      "count": 22
+    },
+    {
+      "name": "video_demo_team_chat",
+      "count": 22
+    },
+    {
+      "name": "cine",
+      "count": 21
+    },
+    {
+      "name": "video_demo_expense_dashboard",
+      "count": 21
+    },
+    {
+      "name": "architect",
+      "count": 20
+    },
+    {
+      "name": "dice",
+      "count": 20
+    },
+    {
+      "name": "grid",
+      "count": 20
+    },
+    {
+      "name": "pdf_packet_handoff_split",
+      "count": 20
+    },
+    {
+      "name": "quill",
+      "count": 20
+    },
+    {
+      "name": "stage",
+      "count": 20
+    },
+    {
+      "name": "archive",
+      "count": 19
+    },
+    {
+      "name": "atlas",
+      "count": 19
+    },
+    {
+      "name": "chat",
+      "count": 19
+    },
+    {
+      "name": "cron",
+      "count": 19
+    },
+    {
+      "name": "desk",
+      "count": 19
+    },
+    {
+      "name": "flow",
+      "count": 19
+    },
+    {
+      "name": "forge",
+      "count": 19
+    },
+    {
+      "name": "nest",
+      "count": 19
+    },
+    {
+      "name": "payroll",
+      "count": 19
+    },
+    {
+      "name": "splitter",
+      "count": 19
+    },
+    {
+      "name": "video_demo_task_manager",
+      "count": 19
+    },
+    {
+      "name": "watch",
+      "count": 19
+    },
+    {
+      "name": "countdown",
+      "count": 18
+    },
+    {
+      "name": "pdf_packet_preparation_workflow",
+      "count": 18
+    },
+    {
+      "name": "qrmaker",
+      "count": 18
+    },
+    {
+      "name": "video_demo_mood_journal",
+      "count": 18
+    },
+    {
+      "name": "todo",
+      "count": 17
+    },
+    {
+      "name": "bmi",
+      "count": 16
+    }
   ]
 }

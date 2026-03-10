@@ -1,7 +1,18 @@
 {
-  "version": "0.5.2",
-  "generated_at": "2026-02-21T17:06:59.711418+00:00",
+  "version": "0.9.0",
+  "generated_at": "2026-03-10T17:32:38.405903+00:00",
   "source": "ClawPad endpoint registry and developer docs",
+  "stats": {
+    "total_endpoints": 4458,
+    "total_apps": 123,
+    "methods": {
+      "GET": 1586,
+      "POST": 2140,
+      "DELETE": 299,
+      "PUT": 431,
+      "PATCH": 2
+    }
+  },
   "includes": {
     "docs": "api-docs/current/docs",
     "reference": "api-docs/current/reference"
