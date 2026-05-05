@@ -1,15 +1,23 @@
 {
-  "version": "0.9.0",
-  "generated_at": "2026-03-10T17:32:38.405903+00:00",
+  "version": "0.16.0",
+  "generated_at": "2026-05-05T22:30:00+00:00",
   "source": "ClawPad endpoint registry and developer docs",
+  "license": "MIT",
+  "pricing": {
+    "personal_use": "free",
+    "business_use": "free",
+    "commercial_use": "free",
+    "remote_api": "free, included",
+    "notes": "ClawPad ships free under the MIT License for personal, business, and commercial use. The Remote API is included at no cost. You only pay third-party LLM providers for tokens you choose to send to them."
+  },
   "stats": {
-    "total_endpoints": 4458,
-    "total_apps": 123,
+    "total_operations": 8206,
+    "total_apps": 309,
     "methods": {
-      "GET": 1586,
-      "POST": 2140,
-      "DELETE": 299,
-      "PUT": 431,
+      "GET": 3172,
+      "POST": 3650,
+      "PUT": 766,
+      "DELETE": 616,
       "PATCH": 2
     }
   },
