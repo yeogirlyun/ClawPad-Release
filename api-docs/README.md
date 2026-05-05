@@ -2,11 +2,17 @@
 
 This directory contains the API documentation payload shipped with binary releases.
 
-## Stats (v0.9.0)
+## Free for personal, business and commercial use
 
-- **4,458 REST endpoints** across 123 apps
-- **Methods:** GET 1,586 | POST 2,140 | PUT 431 | DELETE 299 | PATCH 2
-- **Per-app OpenAPI specs** available at [clawpad.ai/api](https://www.clawpad.ai/api/)
+ClawPad ships under the **MIT License** and is **free for personal, business, and commercial use**. The **Remote API is included at no cost** — no key, no quota, no tier. You only pay third-party LLM providers (OpenAI, Anthropic, Google, etc.) for tokens you choose to send to them through your own credentials.
+
+This applies to every endpoint in the bundle below.
+
+## Stats (v0.16.0)
+
+- **8,200+ REST operations** across **309 apps**
+- **Methods:** GET 3,172 | POST 3,650 | PUT 766 | DELETE 616 | PATCH 2
+- **Per-app OpenAPI specs** with example requests at [clawpad.ai/api](https://www.clawpad.ai/api/)
 
 ## Layout
 
@@ -24,8 +30,13 @@ This directory contains the API documentation payload shipped with binary releas
 
 ## Online Portal
 
-For interactive browsing with per-app specs and example requests: **[www.clawpad.ai/api](https://www.clawpad.ai/api/)**
+For interactive browsing with per-app specs, schemas, and example requests:
+**[www.clawpad.ai/api](https://www.clawpad.ai/api/)**
+
+## License
+
+ClawPad and these API docs are released under the [MIT License](https://github.com/yeogirlyun/ClawPad-Release/blob/main/LICENSE). Use them in any commercial or non-commercial setting; fork, audit, redistribute, and embed without restriction.
 
 ## Release Rule
 
-Every published binary release includes a matching API docs zip asset, built automatically by GitHub Actions from this directory.
+Every published binary release includes a matching API docs zip asset, built automatically from this directory.
